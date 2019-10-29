@@ -1,0 +1,2 @@
+# leetcode
+exercise  simple algorithm
