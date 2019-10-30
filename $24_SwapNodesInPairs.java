@@ -4,6 +4,7 @@ class Solution {
         ListNode fakeHead = new ListNode(0);
         fakeHead.next = head;
         ListNode odd = head,p = fakeHead,even = null;
+        
         while(odd != null && odd.next != null){
             
             //交换
