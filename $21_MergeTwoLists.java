@@ -13,6 +13,7 @@ class Solution {
             r3=r3.next;
         }
         r3.next= l1==null ?l2:l1;
+        
         return l3.next;
     }
 }
