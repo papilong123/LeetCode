@@ -12,7 +12,7 @@ public class $19_RemoveNthNodeFromEndofList {
 
         //找到第len-n+1个元素的前置元素
         ListNode pre = fakeHead;
-        int count = 0;
+        int count = 1;
         while(++count < len-n+1){
             pre = pre.next;
         }
