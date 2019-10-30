@@ -16,6 +16,7 @@ class Solution {
             p = odd;
             odd = odd.next;
         }
+        
         return fakeHead.next;
     }
 }
