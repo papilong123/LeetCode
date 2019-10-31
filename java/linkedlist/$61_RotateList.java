@@ -36,6 +36,7 @@ class Solution {
         pre=pre.next;    
         pre.next=head;
         
+        
         return L.next;
     }
 }
