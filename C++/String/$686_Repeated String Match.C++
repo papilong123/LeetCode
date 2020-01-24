@@ -10,7 +10,7 @@ public:
         if( T.find(B) != string::npos ){
             return k;
         }
-        T.append(A);
+        T.append(A);//使T被B充分遍历
         k+=1;
         if(T.find(B) != string::npos ){
             return k;
