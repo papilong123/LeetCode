@@ -15,8 +15,7 @@ public:
 };
 
 
-//递归
-public int numberOfSteps1(int num) {
+int numberOfSteps1(int num) {
     if(num == 0) 
         return 0;
     if((num & 1) == 0) { // num为偶数
