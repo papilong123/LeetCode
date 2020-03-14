@@ -1,0 +1,11 @@
+class Solution {
+public:
+    bool isUnique(string astr) {
+        int mask=0;
+        for(char c : astr){
+            if((mask & 1 << c-'a') != 0) return false;//用与检测是否第一次出现
+            mask |= 1 << c-'a';//用或把出现的字母存到mask里
+        }
+        return true;
+    }
+};
