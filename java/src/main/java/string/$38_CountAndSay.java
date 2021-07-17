@@ -1,6 +1,6 @@
 package string;
 
-class Solution {
+class $38_CountAndSay {
     public String countAndSay(int n) {
         String res = "1";
 

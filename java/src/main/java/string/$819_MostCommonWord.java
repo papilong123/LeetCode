@@ -1,6 +1,11 @@
 package string;
 
-class Solution {
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+class $819_MostCommonWord {
     public String mostCommonWord(String paragraph, String[] banned) {
         paragraph+=".";
         Set<String> banset = new HashSet();
