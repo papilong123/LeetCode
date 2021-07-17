@@ -1,6 +1,10 @@
 package array;
 
-class Solution {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+class $15_3Sum {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> ans=new ArrayList<>();
