@@ -8,7 +8,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $25_ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         int len=0,cycles=0;
         ListNode p=head,r=null;
