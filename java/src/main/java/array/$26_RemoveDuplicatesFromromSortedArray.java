@@ -1,6 +1,6 @@
 package array;
 
-class Solution {
+class $26_RemoveDuplicatesFromromSortedArray {
     public int removeDuplicates(int[] nums) {
         if(nums.length==0) return 0;
         int k=0;
