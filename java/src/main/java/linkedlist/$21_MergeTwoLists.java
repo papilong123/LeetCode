@@ -1,6 +1,6 @@
 package linkedlist;
 
-class Solution {
+class $21_MergeTwoLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode l3= new ListNode(0),r3=l3;
         while(l1!=null&&l2!=null){

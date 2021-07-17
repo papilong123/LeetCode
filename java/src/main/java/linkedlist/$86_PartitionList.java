@@ -8,7 +8,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $86_PartitionList {
     public ListNode partition(ListNode head, int x) {
         if(head==null)
         return null;

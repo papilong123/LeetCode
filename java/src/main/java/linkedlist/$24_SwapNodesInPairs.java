@@ -1,6 +1,6 @@
 package linkedlist;
 
-class Solution {
+class $24_SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
         if(head == null) return null;
         ListNode fakeHead = new ListNode(0);

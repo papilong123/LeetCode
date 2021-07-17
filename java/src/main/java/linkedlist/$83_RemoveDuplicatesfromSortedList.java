@@ -8,7 +8,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $83_RemoveDuplicatesfromSortedList {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode L = new ListNode(0), pre=L,p=head;
         L.next=head;
