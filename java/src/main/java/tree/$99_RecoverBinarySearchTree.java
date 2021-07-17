@@ -1,6 +1,6 @@
 package tree;
 
-class Solution {
+class $155_MinStack {
     public void recoverTree(TreeNode root) {
         TreeNode firstnode=null;
         TreeNode secondnode=null;

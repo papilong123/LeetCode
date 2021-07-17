@@ -1,8 +1,10 @@
 package stack;
 
-class Solution {
+import java.util.Stack;
+
+class $84_LargestRectangleinHistogram {
     public int largestRectangleArea(int[] heights) {
-        Stack<Integer> stack=new Stack <> ();
+        Stack<Integer> stack = new Stack<>();
         int res=0;
         stack.push(-1);
         for(int i=0;i<heights.length;i++){

@@ -1,12 +1,14 @@
 package stack;
 
-class MinStack {
+import java.util.Stack;
+
+class $155_MinStack {
 
     private Stack<Integer> data;
     private Stack<Integer> helper;
 
     /** initialize your data structure here. */
-    public MinStack() {
+    public $155_MinStack() {
         data=new Stack<>();
         helper=new Stack<>();
     }

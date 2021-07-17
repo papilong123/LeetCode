@@ -1,10 +1,13 @@
 package stack;
 
-class Solution {
+import java.util.HashMap;
+import java.util.Stack;
 
-        private HashMap<Character,Character> mappings;
+class $20_ValidParentheses {
 
-        public Solution(){
+        private final HashMap<Character,Character> mappings;
+
+        public $20_ValidParentheses(){
             this.mappings=new HashMap<Character,Character>();
             this.mappings.put(')','(');
             this.mappings.put(']','[');

@@ -1,6 +1,6 @@
 package stack;
 
-class Solution {
+class $85_MaximalRectangle {
     public int maximalRectangle(char[][] matrix) {
         int maxarea=0;
         if(matrix.length==0) return 0;
