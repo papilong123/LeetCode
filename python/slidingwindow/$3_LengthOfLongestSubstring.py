@@ -22,3 +22,6 @@ class Solution:
                 start += 1
             max_len = max(max_len, end - start)
         return max_len
+
+
+print(Solution().lengthOfLongestSubstring("abcabcbb"))
