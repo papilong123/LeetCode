@@ -3,6 +3,9 @@ package slidingwindow;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/hua-dong-chuang-kou-by-powcai/
+ */
 public class $3_LengthOfLongestSubstring {
 
     public int lengthOfLongestSubstring(String s) {
