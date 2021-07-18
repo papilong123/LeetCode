@@ -8,7 +8,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $147_InsertionSortList {
     public ListNode insertionSortList(ListNode head) {
         ListNode L =new ListNode (0);
         ListNode pre=L,q=null;

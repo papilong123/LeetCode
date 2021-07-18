@@ -1,6 +1,8 @@
 package linkedlist;
 
-class Solution {
+import common.ListNode;
+
+class $203_RemoveLinkedListElements {
     public ListNode removeElements(ListNode head, int val) {
         ListNode L=new ListNode(0);
         L.next=head;

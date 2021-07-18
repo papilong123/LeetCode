@@ -1,5 +1,7 @@
 package linkedlist;
 
+import common.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,7 +10,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $725_SplitLinkedListInParts {
     public ListNode[] splitListToParts(ListNode root, int k) {
         ListNode[] ans=new ListNode[k];
         ListNode p=root;

@@ -1,5 +1,7 @@
 package tree;
 
+import common.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

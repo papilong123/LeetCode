@@ -1,5 +1,10 @@
 package linkedlist;
 
+import common.ListNode;
+
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -11,7 +16,7 @@ package linkedlist;
  *     }
  * }
  */
-public class Solution {
+public class $141_LinkedListCycle {
     public boolean hasCycle(ListNode head) {
         Set<ListNode> set=new HashSet<>();
         while(head!=null){

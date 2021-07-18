@@ -1,5 +1,7 @@
 package linkedlist;
 
+import common.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -11,7 +13,7 @@ package linkedlist;
  *     }
  * }
  */
-public class Solution {
+public class $160_IntersectionOfTwoLinkedLists {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         int lenA=length(headA),lenB=length(headB),dist=0;
         ListNode longlist,shortlist;

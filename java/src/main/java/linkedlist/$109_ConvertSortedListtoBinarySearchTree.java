@@ -1,21 +1,10 @@
-package linkedlist; /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {
+package linkedlist;
+
+import common.ListNode;
+import common.TreeNode;
+
+
+class $109_ConvertSortedListtoBinarySearchTree {
     private ListNode findMiddleElement(ListNode head){
 
         //同一点出发的快慢指针

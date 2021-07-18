@@ -1,5 +1,7 @@
 package linkedlist;
 
+import common.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,7 +10,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $328_OddEvenLinkedList {
     public ListNode oddEvenList(ListNode head) {
         ListNode L=new ListNode(0);
         L.next=head;

@@ -1,5 +1,7 @@
 package linkedlist;
 
+import common.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,7 +10,7 @@ package linkedlist;
  *     ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $234_PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
 
         ListNode L=new ListNode(0);

@@ -1,6 +1,8 @@
 package linkedlist;
 
-class Solution {
+import common.ListNode;
+
+class $206_ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         ListNode L=new ListNode(0);
         L.next=null;
