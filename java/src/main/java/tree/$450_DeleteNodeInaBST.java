@@ -11,7 +11,7 @@ import common.TreeNode;
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class $450_DeleteNodeInaBST {
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {
             return null;
