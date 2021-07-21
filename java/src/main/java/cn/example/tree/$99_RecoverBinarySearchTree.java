@@ -1,5 +1,10 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
+import java.util.Deque;
+import java.util.LinkedList;
+
 class $155_MinStack {
     public void recoverTree(TreeNode root) {
         TreeNode firstnode=null;

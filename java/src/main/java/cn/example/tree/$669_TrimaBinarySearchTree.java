@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $669_TrimaBinarySearchTree {
     public TreeNode trimBST(TreeNode root, int L, int R) {
         if(root==null) return null;

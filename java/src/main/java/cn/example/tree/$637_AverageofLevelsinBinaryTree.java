@@ -1,5 +1,11 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 class $637_AverageofLevelsinBinaryTree {
     public List<Double> averageOfLevels(TreeNode root) {
         double sum=0,n=1,t;

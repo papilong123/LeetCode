@@ -271,3 +271,5 @@ cython_debug/
 hs_err_pid*
 
 *.iml
+
+.idea/
