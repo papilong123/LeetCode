@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool valid(const string& s, const string& q) {
+    bool valid(const cn.example.string& s, const cn.example.string& q) {
         int i = 0;
         int j = 0;
         int l1 = 0;
@@ -22,7 +22,7 @@ public:
         if (d1 < d2 || (d1 < 3 && d1 > d2)) return false;
         return true;
     }
-    int expressiveWords(string S, vector<string>& words) {
+    int expressiveWords(cn.example.string S, vector<cn.example.string>& words) {
         int res = 0;
         for (auto& w : words) {
             res += valid(S, w);

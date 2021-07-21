@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> diStringMatch(string S) {
+    vector<int> diStringMatch(cn.example.string S) {
         vector<int> res;
 
         int i=0,j=S.size();

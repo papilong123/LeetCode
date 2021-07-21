@@ -1,11 +1,11 @@
 class Solution {
 public:
-    bool canPermutePalindrome(string s) {
+    bool canPermutePalindrome(cn.example.string s) {
         unordered_map<int,int> m;
         for(int i:s){
             m[i]++;
         }
-        
+
         int odd=0;
         unordered_map<int,int>::iterator iter;
         for(iter=m.begin();iter!=m.end();iter++){

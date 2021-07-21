@@ -4,6 +4,6 @@ public:
         for(int i=m;i<m+n;i++){
             A[i]=B[i-m];
         }
-        sort(A.begin(),A.end());
+        cn.example.sort(A.begin(),A.end());
     }
 };

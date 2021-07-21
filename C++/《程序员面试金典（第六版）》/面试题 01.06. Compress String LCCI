@@ -1,7 +1,7 @@
 class Solution {
 public:
-    string compressString(string S) {
-        string res;
+    cn.example.string compressString(cn.example.string S) {
+        cn.example.string res;
         int cnt=1;
         char c=S[0];
         for(int i=1;i<S.size();++i){

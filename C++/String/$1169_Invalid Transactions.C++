@@ -1,20 +1,20 @@
 struct term{
-    string name;
+    cn.example.string name;
     int time;
     int prize;
-    string place;
+    cn.example.string place;
 };
 
 class Solution {
 public:
 
-    vector<string> invalidTransactions(vector<string>& transactions) {
-        vector<string> res;
+    vector<cn.example.string> invalidTransactions(vector<cn.example.string>& transactions) {
+        vector<cn.example.string> res;
         vector<term> terms;
         term t;
         for(auto str: transactions){
             int count=0;
-            string tmp="";
+            cn.example.string tmp="";
             for(auto c: str){
                 if(c==','){
                     if(count==0) t.name=tmp;
@@ -35,7 +35,7 @@ public:
                 res.push_back(transactions[i]);
                 continue;
             }
-            for (int j = 0;j<terms.size();j++){   
+            for (int j = 0;j<terms.size();j++){
                 if (i == j) continue;
                 if (terms[i].name==terms[j].name && (abs)(terms[i].time-terms[j].time)<=60 && terms[i].place!=terms[j].place){
                     res.push_back(transactions[i]);

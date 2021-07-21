@@ -3,7 +3,7 @@ public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         vector<vector<int>> res;
         if(intervals.empty()) return res;
-        sort(intervals.begin(),intervals.end());
+        cn.example.sort(intervals.begin(),intervals.end());
         int index=0;
         res.push_back(intervals[0]);
 

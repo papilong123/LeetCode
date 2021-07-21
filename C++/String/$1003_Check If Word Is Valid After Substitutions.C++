@@ -1,7 +1,7 @@
 class Solution {
 public:
-    bool isValid(string S) {
-        stack<char> s;
+    bool isValid(cn.example.string S) {
+        cn.example.stack<char> s;
         for(int i=0;i<S.size();i++){
             if(S[i]!='c'){
                 s.push(S[i]);

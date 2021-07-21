@@ -1,13 +1,13 @@
 class Solution {
 public:
     int totalNQueens(int n) {
-        vector<int> stack;
-        vector<vector<string>> res;
+        vector<int> cn.example.stack;
+        vector<vector<cn.example.string>> res;
         unordered_set<int> col;
         unordered_set<int> master;
         unordered_set<int> vice;
 
-        dfs(0,n,master,vice,col,stack,res);
+        dfs(0,n,master,vice,col,cn.example.stack,res);
 
         return res.size();
     }
@@ -17,24 +17,24 @@ public:
             unordered_set<int>& master,
             unordered_set<int>& vice,
             unordered_set<int>& col,
-            vector<int>& stack,
-            vector<vector<string>>& res){
-        
+            vector<int>& cn.example.stack,
+            vector<vector<cn.example.string>>& res){
+
         if(row==n){
-            res.push_back(convert2board(stack,n));
+            res.push_back(convert2board(cn.example.stack,n));
             return;
         }
 
         for(int i=0;i<n;i++){
             if(col.find(i)==col.end() && master.find(row+i)==master.end() && vice.find(row-i)==vice.end()){
-                stack.push_back(i);
+                cn.example.stack.push_back(i);
                 master.insert(row+i);
                 vice.insert(row-i);
                 col.insert(i);
 
-                dfs(row+1,n,master,vice,col,stack,res);
+                dfs(row+1,n,master,vice,col,cn.example.stack,res);
 
-                stack.pop_back();
+                cn.example.stack.pop_back();
                 master.erase(row+i);
                 vice.erase(row-i);
                 col.erase(i);
@@ -43,10 +43,10 @@ public:
     }
 
 
-    vector<string> convert2board(vector<int>& stack,int n){
-        vector<string> strs;
-        for(auto num: stack){
-            string str=string(n,'.');
+    vector<cn.example.string> convert2board(vector<int>& cn.example.stack,int n){
+        vector<cn.example.string> strs;
+        for(auto num: cn.example.stack){
+            cn.example.string str=cn.example.string(n,'.');
             str[num]='Q';
             strs.push_back(str);
         }

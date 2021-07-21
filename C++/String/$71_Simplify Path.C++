@@ -1,9 +1,9 @@
 class Solution {
 public:
-    string simplifyPath(string path) {
-        string res,tmp;
+    cn.example.string simplifyPath(cn.example.string path) {
+        cn.example.string res,tmp;
         stringstream ss(path);
-        vector<string> stk;
+        vector<cn.example.string> stk;
         while(getline(ss,tmp,'/')){
             if(tmp==""||tmp==".") continue;
             else if(tmp==".." && !stk.empty()){

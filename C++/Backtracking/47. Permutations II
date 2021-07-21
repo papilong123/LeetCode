@@ -5,7 +5,7 @@ public:
         vector<int> path;
         vector<int> flag(nums.size(),false);
         // 排序
-        sort(nums.begin(),nums.end());
+        cn.example.sort(nums.begin(),nums.end());
         dfs(0,nums,path,res,flag);
         return res;
     }

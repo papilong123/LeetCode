@@ -1,10 +1,10 @@
 class Solution {
 public:
-    string toGoatLatin(string S) {
-        string str="ma";
-        string ans,tmp;
+    cn.example.string toGoatLatin(cn.example.string S) {
+        cn.example.string str="ma";
+        cn.example.string ans,tmp;
         istringstream ss(S);
-        unordered_set<char> vowels={'a','A','e','E','i','I','o','O','u','U'}; 
+        unordered_set<char> vowels={'a','A','e','E','i','I','o','O','u','U'};
         while(ss >> tmp){
             str+="a";
             if(vowels.find(tmp[0])!=vowels.end()){

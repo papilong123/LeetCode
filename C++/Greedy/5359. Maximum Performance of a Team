@@ -7,7 +7,7 @@ public:
         for(int i=0;i<n;i++){
             arr.push_back({efficiency[i],speed[i]});//将效率和速度成对的加入数组
         }
-        sort(arr.rbegin(),arr.rend());//按照<效率,速度>按从大到小排序
+        cn.example.sort(arr.rbegin(),arr.rend());//按照<效率,速度>按从大到小排序
         long sum=0,res=0;
         for(int i=0;i<n;i++){
             pq.push(arr[i].second);//出现新元素就入队

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int maxNumberOfBalloons(string text) {
+    int maxNumberOfBalloons(cn.example.string text) {
        int a[5]={0};
        for(int i=0;i<text.size();i++){
            switch(text[i]){

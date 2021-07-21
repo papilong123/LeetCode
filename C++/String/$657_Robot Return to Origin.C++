@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool judgeCircle(string moves) {
+    bool judgeCircle(cn.example.string moves) {
         int r=0,l=0,u=0,d=0;
         for(char c: moves){
             if(c=='R'){

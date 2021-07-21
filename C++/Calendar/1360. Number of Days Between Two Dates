@@ -2,11 +2,11 @@ class Solution {
 public:
     int month[13]={-1,31,28,31,30,31,30,31,31,30,31,30,31};
 
-    int daysBetweenDates(string date1, string date2) {
+    int daysBetweenDates(cn.example.string date1, cn.example.string date2) {
         return abs(count(date1)-count(date2));
     }
 
-    int count(string str){
+    int count(cn.example.string str){
         int y=0,m=0,d=0,time=0;
         y=stoi(str.substr(0,4));
         m=stoi(str.substr(5,2));

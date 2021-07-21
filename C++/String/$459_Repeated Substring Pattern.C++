@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool repeatedSubstringPattern(string s) {
+    bool repeatedSubstringPattern(cn.example.string s) {
         return (s+s).find(s,1)!=s.size();
     }
 };

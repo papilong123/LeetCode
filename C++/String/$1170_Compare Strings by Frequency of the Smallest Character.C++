@@ -1,12 +1,12 @@
 class Solution {
-    int f(string& str){//统计最小字母个数
-        sort(str.begin(),str.end());
+    int f(cn.example.string& str){//统计最小字母个数
+        cn.example.sort(str.begin(),str.end());
         int i;
         for(i=0 ; i<str.size() && str[0]==str[i] ; i++);
         return i;
     }
 public:
-    vector<int> numSmallerByFrequency(vector<string>& queries, vector<string>& words) {
+    vector<int> numSmallerByFrequency(vector<cn.example.string>& queries, vector<cn.example.string>& words) {
         vector<int> res;
         vector<int> count(12,0);
         for(int i=0;i<words.size();i++){

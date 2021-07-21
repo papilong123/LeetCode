@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int numDecodings(string s) {
+    int numDecodings(cn.example.string s) {
         if (s[0] == '0') return 0;
-    int pre = 1, curr = 1;//dp[-1] = dp[0] = 1
+    int pre = 1, curr = 1;//cn.example.dp[-1] = cn.example.dp[0] = 1
     for (int i = 1; i < s.size(); i++) {
         int tmp = curr;
         if (s[i] == '0')

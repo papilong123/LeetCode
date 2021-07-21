@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool canConstruct(string ransomNote, string magazine) {
+    bool canConstruct(cn.example.string ransomNote, cn.example.string magazine) {
         int a[26]={0};
         for(int i=0;i<magazine.size();i++){//统计元素数量
             a[magazine[i]-'a']++;

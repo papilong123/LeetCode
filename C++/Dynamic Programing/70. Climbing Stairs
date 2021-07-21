@@ -20,15 +20,15 @@ public:
 class Solution {
 public:
     int climbStairs(int n) {
-        vector<int> dp(n+1,0);
+        vector<int> cn.example.dp(n+1,0);
 
         if(n==1) return 1;
-        
-        dp[1]=1;
-        dp[2]=2;
+
+        cn.example.dp[1]=1;
+        cn.example.dp[2]=2;
         for(int i=3;i<=n;i++){
-            dp[i]=dp[i-1]+dp[i-2];
+            cn.example.dp[i]=cn.example.dp[i-1]+cn.example.dp[i-2];
         }
-        return dp[n];
+        return cn.example.dp[n];
     }
 };

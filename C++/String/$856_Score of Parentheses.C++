@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int scoreOfParentheses(string S) {
+    int scoreOfParentheses(cn.example.string S) {
         int res=0,count=0;
         for(int i=0;i<S.size();i++){
             if(S[i]=='(') count++; else count--;

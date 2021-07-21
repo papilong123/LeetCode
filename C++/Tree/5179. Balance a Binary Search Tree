@@ -1,5 +1,5 @@
 /**
- * Definition for a binary tree node.
+ * Definition for a binary cn.example.tree node.
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
@@ -16,7 +16,7 @@ public:
         avl=sortedArrayToBST(arr);
         return avl;
     }
-    
+
     void buildarr(TreeNode* root,vector<int>& arr){
         if(root){
             buildarr(root->left,arr);
@@ -25,7 +25,7 @@ public:
         }
     }
 
-    
+
     TreeNode* sortedArrayToBST(vector<int>& nums) {
         if(nums.empty()) return NULL;
 

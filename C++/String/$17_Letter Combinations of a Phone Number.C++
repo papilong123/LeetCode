@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<string> letterCombinations(string digits) {
-        map<char,string> M={{'2',"abc"},{'3',"def"},{'4',"ghi"},{'5',"jkl"},{'6',"mno"},{'7',"pqrs"},{'8',"tuv"},{'9',"wxyz"}};//映射哈希函数
-        vector<string> res;
+    vector<cn.example.string> letterCombinations(cn.example.string digits) {
+        map<char,cn.example.string> M={{'2',"abc"},{'3',"def"},{'4',"ghi"},{'5',"jkl"},{'6',"mno"},{'7',"pqrs"},{'8',"tuv"},{'9',"wxyz"}};//映射哈希函数
+        vector<cn.example.string> res;
         int n=digits.size();
-        queue<string> q;
+        queue<cn.example.string> q;
 
         for(int i=0;i<M[digits[0]].size();i++){
-            string s;
+            cn.example.string s;
             s.push_back(M[digits[0]][i]);//char转string
             q.push(s);//string入队
         }
@@ -17,7 +17,7 @@ public:
             int len=q.size();
             while(len--){
                 for(int j=0 ; j<M[digits[i]].size() ; j++){
-                    string str=q.front();
+                    cn.example.string str=q.front();
                     str+=M[digits[i]][j];//队头元素加新元素
                     q.push(str);//进队
                 }

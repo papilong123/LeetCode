@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool checkValidString(string s) {
+    bool checkValidString(cn.example.string s) {
         int count=0;
         for(auto c: s){//判断'('是否比其它字符多
             if(c=='('){

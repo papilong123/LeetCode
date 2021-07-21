@@ -5,13 +5,13 @@ class Solution {
 所以我们需要优化一个答案生成顺序，优先生成左 L 上 U，即可避免移动出 alphabet board 的非法路径。*/
 
 public:
-    string alphabetBoardPath(string target) {
-        string res;
+    cn.example.string alphabetBoardPath(cn.example.string target) {
+        cn.example.string res;
         int x=0,y=0,x1,y1;
         for(int i=0;i<target.size();i++){
             y1=(target[i]-'a')/5;
             x1=(target[i]-'a')%5;
-            res+=string(max(0,y-y1),'U')+string(max(0,x1-x),'R')+string(max(0,x-x1),'L')+string(max(0,y1-y),'D')+"!";
+            res+=cn.example.string(max(0,y-y1),'U')+cn.example.string(max(0,x1-x),'R')+cn.example.string(max(0,x-x1),'L')+cn.example.string(max(0,y1-y),'D')+"!";
             x=x1;
             y=y1;
         }

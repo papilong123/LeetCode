@@ -1,7 +1,7 @@
 class Solution {
 public:
-    bool isPalindrome(string s) {
-        string str="";
+    bool isPalindrome(cn.example.string s) {
+        cn.example.string str="";
         for(char c : s){
             if(isalnum(c)){
                 str+=c;

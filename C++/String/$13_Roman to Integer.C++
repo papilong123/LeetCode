@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int romanToInt(string s) {
+    int romanToInt(cn.example.string s) {
         unordered_map<char,int> m;
         m['M']=1000;
         m['D']=500;

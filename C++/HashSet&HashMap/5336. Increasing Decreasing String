@@ -1,7 +1,7 @@
 class Solution {
 public:
-    string sortString(string s) {
-        string res;
+    cn.example.string sortString(cn.example.string s) {
+        cn.example.string res;
         int count[26]={0};
         for(char c:s){
             count[c-'a']++;

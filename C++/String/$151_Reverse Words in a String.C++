@@ -1,10 +1,10 @@
 class Solution {
 public:
-    string reverseWords(string s) {
+    cn.example.string reverseWords(cn.example.string s) {
         int n=s.size();
-        string ans,str;
+        cn.example.string ans,str;
         stringstream ss(s);
-        vector<string> tmp;
+        vector<cn.example.string> tmp;
 
         while( ss>>str ){
             tmp.push_back(str);

@@ -8,13 +8,13 @@
 
 class Solution {
 public:
-    int numSpecialEquivGroups(vector<string>& A) {
+    int numSpecialEquivGroups(vector<cn.example.string>& A) {
         int n=A.size();
-        set<string> res;
+        set<cn.example.string> res;
         for(int i=0;i<n;i++){
-            string str;
-            string odd="";
-            string even="";
+            cn.example.string str;
+            cn.example.string odd="";
+            cn.example.string even="";
             for(int j=0;j<A[i].size();j++){
                 if(j%2==1){
                     odd+=A[i][j];
@@ -22,8 +22,8 @@ public:
                     even+=A[i][j];
                 }
             }
-            sort(odd.begin(),odd.end());
-            sort(even.begin(),even.end());
+            cn.example.sort(odd.begin(),odd.end());
+            cn.example.sort(even.begin(),even.end());
             str=(odd+even);
             res.insert(str);
         }

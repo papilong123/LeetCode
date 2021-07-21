@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool Judgehuiwen(int left,int right,string &str) {
+    bool Judgehuiwen(int left,int right,cn.example.string &str) {
         while (left < right) {
             if (str[left] != str[right]) {
                 return false;
@@ -12,7 +12,7 @@ public:
         return true;
     }
 
-    bool validPalindrome(string s){
+    bool validPalindrome(cn.example.string s){
         int left = 0,right = s.size() - 1;
         while (left < right) {
             if (s[left] != s[right]) {

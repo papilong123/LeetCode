@@ -1,4 +1,4 @@
-bool compare(const string& a,const string& b){
+bool compare(const cn.example.string& a,const cn.example.string& b){
         int i=a.find(' ');
         int j=b.find(' ');
         if(isalpha(a[i+1]) && isalpha(b[j+1])){
@@ -15,7 +15,7 @@ bool compare(const string& a,const string& b){
 
 class Solution {
 public:
-    vector<string> reorderLogFiles(vector<string>& logs) {
+    vector<cn.example.string> reorderLogFiles(vector<cn.example.string>& logs) {
         stable_sort(logs.begin(),logs.end(),compare);
         return logs;
     }

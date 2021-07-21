@@ -1,6 +1,6 @@
 class Solution {
 public:
-    string reverseWords(string s) {
+    cn.example.string reverseWords(cn.example.string s) {
         int anchor=0;
         int n=s.size();
         for(int i=0;i<n;i++){

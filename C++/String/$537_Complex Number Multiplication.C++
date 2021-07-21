@@ -1,9 +1,9 @@
 class Solution {
 public:
-    string complexNumberMultiply(string a, string b) {
+    cn.example.string complexNumberMultiply(cn.example.string a, cn.example.string b) {
         stringstream aa(a),bb(b);
-        vector<string> tmp;
-        string s;
+        vector<cn.example.string> tmp;
+        cn.example.string s;
         while(getline(aa,s,'+')) tmp.push_back(s);
         tmp[1].erase(tmp[1].end()-1);
         while(getline(bb,s,'+')) tmp.push_back(s);

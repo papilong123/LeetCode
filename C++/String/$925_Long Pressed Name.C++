@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isLongPressedName(string name, string typed) {
+    bool isLongPressedName(cn.example.string name, cn.example.string typed) {
         int s=0,d=0,i=0,j=0,len1=0,len2=0;
         while(i<name.size() && j<typed.size()){
             if(name[i]!=typed[j]){

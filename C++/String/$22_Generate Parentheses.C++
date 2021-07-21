@@ -1,13 +1,13 @@
 class Solution {
 private:
-    vector<string> res;
+    vector<cn.example.string> res;
 public:
-    vector<string> generateParenthesis(int n) {
+    vector<cn.example.string> generateParenthesis(int n) {
         dfs("", n, n, res);
         return res;
     }
 
-    void dfs(string str,int left,int right,vector<string>& res){
+    void dfs(cn.example.string str,int left,int right,vector<cn.example.string>& res){
         if(left==0 && right==0){
             res.push_back(str);
             return;

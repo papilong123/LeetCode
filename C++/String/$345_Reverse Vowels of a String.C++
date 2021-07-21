@@ -6,7 +6,7 @@ public:
         return true;
         else return false;
     }
-    string reverseVowels(string s) {
+    cn.example.string reverseVowels(cn.example.string s) {
         int i=0,j=s.size()-1;
         while(i<j){
             if(!helper(s[i])){

@@ -3,7 +3,7 @@ public:
     int heightChecker(vector<int>& heights) {
         int res;
         vector<int> arr(heights);
-        sort(arr.begin(),arr.end());
+        cn.example.sort(arr.begin(),arr.end());
 
         int count=0;
         for(int i=0;i<arr.size();i++){

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int compareVersion(string version1, string version2) {
+    int compareVersion(cn.example.string version1, cn.example.string version2) {
         char c;
         istringstream str1(version1);
         istringstream str2(version2);

@@ -7,7 +7,7 @@
  * };
  */
 /**
- * Definition for a binary tree node.
+ * Definition for a binary cn.example.tree node.
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
@@ -23,7 +23,7 @@ public:
         if(root==NULL) return false;
 
         //先判断当前的节点，如果不对，再看左子树和右子树呗
-        return isSub(head,root) || isSubPath(head,root->left) || isSubPath(head,root->right); 
+        return isSub(head,root) || isSubPath(head,root->left) || isSubPath(head,root->right);
     }
 
     bool isSub(ListNode* head,TreeNode* root){
@@ -37,6 +37,6 @@ public:
         if(head->val!=root->val) return false;
 
         //如果值相同，继续看，左边和右边有一个满足即可
-        return isSub(head->next,root->left) || isSub(head->next,root->right); 
+        return isSub(head->next,root->left) || isSub(head->next,root->right);
     }
 };

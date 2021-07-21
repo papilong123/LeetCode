@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> getLeastNumbers(vector<int>& arr, int k) {
-        sort(begin(arr),end(arr));
+        cn.example.sort(begin(arr),end(arr));
         vector<int> res(arr.begin(),arr.begin()+k);
         return res;
     }

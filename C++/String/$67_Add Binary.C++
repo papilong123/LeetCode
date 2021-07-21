@@ -1,7 +1,7 @@
 class Solution {
 public:
-    string addBinary(string a, string b) {
-        string res(max(a.size(),b.size()),'0');
+    cn.example.string addBinary(cn.example.string a, cn.example.string b) {
+        cn.example.string res(max(a.size(),b.size()),'0');
         int i=a.size()-1,j=b.size()-1,k=max(a.size(),b.size())-1;
         int carry=0;
         while(i>=0 || j>=0){

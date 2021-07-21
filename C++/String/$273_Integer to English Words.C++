@@ -1,19 +1,19 @@
 class Solution {
 public:
-    string numberToWords(int num) {
+    cn.example.string numberToWords(int num) {
         if(num==0) return "Zero";
         else return f(num).substr(1);
     }
 private:
     static const char * const a_20[];
     static const char * const a_100[];
-    static string f(int n){
+    static cn.example.string f(int n){
         if(n>=1000000000) return f(n/1000000000)+" Billion"+f(n-1000000000*(n/1000000000));
         else if(n>=1000000) return f(n/1000000)+" Million"+f(n-1000000*(n/1000000));
         else if(n>=1000) return f(n/1000)+" Thousand"+f(n-1000*(n/1000));
         else if(n>=100) return f(n/100)+" Hundred"+f(n-100*(n/100));
-        else if(n>=20) return string(" ")+a_100[n/10-2]+f(n-10*(n/10));
-        else if(n>=1) return string(" ")+a_20[n-1];
+        else if(n>=20) return cn.example.string(" ")+a_100[n/10-2]+f(n-10*(n/10));
+        else if(n>=1) return cn.example.string(" ")+a_20[n-1];
         else return "";
     }
 };

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int minDistance(string word1, string word2) {
+    int minDistance(cn.example.string word1, cn.example.string word2) {
         int M=word1.size();
         int N=word2.size();
 

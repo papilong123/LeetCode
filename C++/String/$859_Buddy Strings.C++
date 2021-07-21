@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool buddyStrings(string& A, string& B) {
+    bool buddyStrings(cn.example.string& A, cn.example.string& B) {
         if(A.size()!=B.size()) return false;
         vector<int> res;
         for(int i=0;i<A.size();i++){

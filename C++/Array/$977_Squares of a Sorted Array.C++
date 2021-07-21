@@ -4,7 +4,7 @@ public:
         for(int i=0;i<A.size();i++){
             A[i]*=A[i];
         }
-        sort(A.begin(),A.end());
+        cn.example.sort(A.begin(),A.end());
         return A;
     }
 };

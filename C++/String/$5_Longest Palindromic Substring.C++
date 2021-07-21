@@ -1,6 +1,6 @@
 class Solution {
 public:
-    string longestPalindrome(string s) {
+    cn.example.string longestPalindrome(cn.example.string s) {
         int n=s.size();
         int len=0,start=0,end=0;
         for(int i=0;i<n;i++){
@@ -14,10 +14,10 @@ public:
         }
         return s.substr(start,len);
     }
-    
+
     //返回回文字串的长度
     private:
-    int helper(string s,int i,int j){
+    int helper(cn.example.string s,int i,int j){
         while(i>=0 && j<s.size() && s[i]==s[j]){
             i--;
             j++;

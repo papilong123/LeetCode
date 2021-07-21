@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int help(string s,int i,int j){//回文串个数
+    int help(cn.example.string s,int i,int j){//回文串个数
         int count=0;
         while(i>=0 && j<=s.size()-1){
             if( s[i] == s[j] ){
@@ -12,7 +12,7 @@ public:
         }
         return count;
     }
-    int countSubstrings(string s) {
+    int countSubstrings(cn.example.string s) {
         int res=0;
         for(int i=0;i<s.size();i++){
             res+= help(s,i,i);

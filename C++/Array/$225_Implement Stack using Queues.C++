@@ -5,8 +5,8 @@ public:
     MyStack() {
         //do nothing
     }
-    
-    /** Push element x onto stack. */
+
+    /** Push element x onto cn.example.stack. */
     void push(int x) {
         nums.push(x);
         for(int i=0;i<nums.size()-1;i++){
@@ -14,20 +14,20 @@ public:
            nums.pop();
         }
     }
-    
-    /** Removes the element on top of the stack and returns that element. */
+
+    /** Removes the element on top of the cn.example.stack and returns that element. */
     int pop() {
         int num=nums.front();
         nums.pop();
         return num;
     }
-    
+
     /** Get the top element. */
     int top() {
         return nums.front();
     }
-    
-    /** Returns whether the stack is empty. */
+
+    /** Returns whether the cn.example.stack is empty. */
     bool empty() {
         return nums.empty();
     }

@@ -1,7 +1,7 @@
 class Solution {
 public:
-    int numUniqueEmails(vector<string>& emails) {
-        set<string> res;
+    int numUniqueEmails(vector<cn.example.string>& emails) {
+        set<cn.example.string> res;
         for(int i=0;i<emails.size();i++){
             for(int j=0;j<emails[i].size();j++){
                 if(emails[i][j]=='.'){

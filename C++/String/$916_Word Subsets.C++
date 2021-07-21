@@ -1,7 +1,7 @@
 class Solution {
 public:
-    vector<string> wordSubsets(vector<string>& A, vector<string>& B) {
-        vector<string> res;
+    vector<cn.example.string> wordSubsets(vector<cn.example.string>& A, vector<cn.example.string>& B) {
+        vector<cn.example.string> res;
 
         int B_max[26]={};
         for(int i=0;i<B.size();i++){
@@ -12,7 +12,7 @@ public:
             }
         }
 
-        
+
         for(int i=0;i<A.size();i++){                    //和A中元素个数比较
             int A_max[26]={};                           //每个单词元素个数的哈希表
             for(int j=0;j<A[i].size();j++){

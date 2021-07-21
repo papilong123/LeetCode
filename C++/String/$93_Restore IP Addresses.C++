@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<string> restoreIpAddresses(string s) {
-		string ip;
+    vector<cn.example.string> restoreIpAddresses(cn.example.string s) {
+		cn.example.string ip;
 		helper(s, 0, ip);
 		return res;
 	}
-	void helper(string s, int n, string ip) {
+	void helper(cn.example.string s, int n, cn.example.string ip) {
 		if (n == 4) {
-			if (s.empty()) res.push_back(ip); 
+			if (s.empty()) res.push_back(ip);
 		}
 		else {
 			for (int k = 1; k < 4; ++k) {
@@ -20,5 +20,5 @@ public:
 		return;
 	}
 private:
-	vector<string> res;
+	vector<cn.example.string> res;
 };

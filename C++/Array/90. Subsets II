@@ -3,7 +3,7 @@ class Solution {
     vector<int> path;
 public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        sort(nums.begin(),nums.end());
+        cn.example.sort(nums.begin(),nums.end());
         helper(0,nums);
         return res;
     }

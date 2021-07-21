@@ -1,9 +1,9 @@
 class Solution {
 public:
-    int calculate(string s) {
+    int calculate(cn.example.string s) {
         int n, ans=0, val=0;
-        stack<int> vals;
-        stack<char> ops;
+        cn.example.stack<int> vals;
+        cn.example.stack<char> ops;
 
         s+="+";
         n=s.size();//使最后一个乘除运算实现

@@ -4,6 +4,6 @@ public:
         for(auto t : nums2){
             nums1[m++]=t;
         }
-        sort(nums1.begin(),nums1.end());
+        cn.example.sort(nums1.begin(),nums1.end());
     }
 };

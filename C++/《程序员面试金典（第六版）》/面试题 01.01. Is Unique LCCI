@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isUnique(string astr) {
+    bool isUnique(cn.example.string astr) {
         int mask=0;
         for(char c : astr){
             if((mask & 1 << c-'a') != 0) return false;//用与检测是否第一次出现

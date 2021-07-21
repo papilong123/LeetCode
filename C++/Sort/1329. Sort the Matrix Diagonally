@@ -9,9 +9,9 @@ public:
             }
         }
         for(int i=0;i<m+n-1;i++){
-            sort(matrix[i].begin(),matrix[i].end());
+            cn.example.sort(matrix[i].begin(),matrix[i].end());
         }
-        
+
         int cnt[m+n-1]={0};//记录每一对角线加到了第几个
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){

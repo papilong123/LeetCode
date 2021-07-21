@@ -1,12 +1,12 @@
 class Solution {
 public:
-    string findReplaceString(string S, vector<int>& indexes, vector<string>& sources, vector<string>& targets) {
+    cn.example.string findReplaceString(cn.example.string S, vector<int>& indexes, vector<cn.example.string>& sources, vector<cn.example.string>& targets) {
         int n=S.size();
-        string s="",res="";
+        cn.example.string s="",res="";
         vector<int> flag(n,-1);
         for(int i=0;i<sources.size();i++){
             int len=sources[i].size();
-            string str=S.substr(indexes[i],len);
+            cn.example.string str=S.substr(indexes[i],len);
             if(sources[i].compare(str)==0){
                 flag[indexes[i]]=i;
                 while(len>1){

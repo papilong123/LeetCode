@@ -1,7 +1,7 @@
 class Solution {
 public:
-    string minRemoveToMakeValid(string s) {
-        stack<int> stk;
+    cn.example.string minRemoveToMakeValid(cn.example.string s) {
+        cn.example.stack<int> stk;
         for(int i=0;i<s.size();i++){
             if(s[i]=='('){
                 stk.push(i);

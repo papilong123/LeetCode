@@ -1,6 +1,6 @@
 class Solution {
 public:
-    string gcdOfStrings(string str1, string str2) {
+    cn.example.string gcdOfStrings(cn.example.string str1, cn.example.string str2) {
         if(str1+str2 != str2+str1) return "";
         int res=help(str1.size(),str2.size());
         return str1.substr(0,res);
