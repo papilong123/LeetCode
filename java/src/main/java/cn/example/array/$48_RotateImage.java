@@ -1,6 +1,6 @@
 package cn.example.array;
 
-class Solution {
+class $48_RotateImage {
     public void rotate(int[][] matrix) {
         int n=matrix.length;
 

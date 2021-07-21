@@ -1,6 +1,6 @@
 package cn.example.array;
 
-class Solution {
+class $35_SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {
         int n=nums.length-1,i=0;
         while(i<=n){

@@ -1,6 +1,6 @@
 package cn.example.array;
 
-class Solution {
+class $42_TrappingRainWater {
     public int trap(int[] height) {
         int start=0,end=height.length-1,sum=0,maxleft=0,maxright=0;
         while(start<end){

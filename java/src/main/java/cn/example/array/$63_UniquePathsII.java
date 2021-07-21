@@ -1,6 +1,6 @@
 package cn.example.array;
 
-class Solution {
+class $63_UniquePathsII {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int R = obstacleGrid.length;
         int C = obstacleGrid[0].length;

@@ -1,6 +1,6 @@
 package cn.example.array;
 
-class Solution {
+class $41_FirstMissingPositive {
     public int firstMissingPositive(int[] nums) {
         int[] A=new int[nums.length+2];
         for( int item : nums){
