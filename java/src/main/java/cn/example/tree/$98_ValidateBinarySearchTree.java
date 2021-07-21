@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $98_ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
         return helper(root,null,null);
