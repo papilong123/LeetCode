@@ -2,14 +2,14 @@ package cn.example.stack;
 
 import java.util.Stack;
 
-class MyQueue {
+class $232_ImplementQueueUsingStacks {
 
 
     private Stack<Integer> s1;
     private Stack<Integer> s2;
     int front;
     /** Initialize your data structure here. */
-    public MyQueue() {
+    public void MyQueue() {
         s1=new Stack<>();
         s2=new Stack<>();
     }
