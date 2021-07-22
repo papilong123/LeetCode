@@ -1,5 +1,7 @@
 package cn.example.stack;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -27,5 +29,36 @@ class $20_ValidParentheses {
                 }
             }
             return stack.empty();
+        }
+
+        public boolean $20_ValidParentheses2(String s){
+            char[] array = s.toCharArray();
+            Deque<Character> q = new ArrayDeque<>();
+            for (int i = 0; i < s.length(); i++){
+                if(array[i] =='(' || array[i] =='[' || array[i] =='{'){
+                    q.addLast(array[i]);
+                }else{
+                    if(array[i] == ')'){
+                        if(q.size() > 0 &&'(' == q.pollLast()){
+                            continue;
+                        }else{
+                            return false;
+                        }
+                    }else if(q.size() > 0 && array[i] == ']'){
+                        if('[' == q.pollLast()){
+                            continue;
+                        }else{
+                            return false;
+                        }
+                    }else if(q.size() > 0 && array[i] == '}'){
+                        if('{' == q.pollLast()){
+                            continue;
+                        }else{
+                            return false;
+                        }
+                    }
+                }
+            }
+            return q.size() == 0 && array.length % 2 != 1;
         }
 }
