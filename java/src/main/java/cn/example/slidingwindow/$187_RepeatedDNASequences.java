@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 利用位运算实现滑动窗口
+ * 利用位运算实现滑动窗口，适用与元素种类比较少的情况
  */
 public class $187_RepeatedDNASequences {
     public List<String> findRepeatedDnaSequences(String s) {
