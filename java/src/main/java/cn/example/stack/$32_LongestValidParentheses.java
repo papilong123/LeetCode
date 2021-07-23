@@ -72,7 +72,7 @@ public class $32_LongestValidParentheses {
         return res;
 
     }
-    
+
 //    dp
     public int longestValidParentheses2(String s) {
         int maxans = 0;
