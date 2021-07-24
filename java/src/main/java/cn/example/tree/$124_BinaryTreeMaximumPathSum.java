@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $124_BinaryTreeMaximumPathSum {
     int sum=Integer.MIN_VALUE;
 

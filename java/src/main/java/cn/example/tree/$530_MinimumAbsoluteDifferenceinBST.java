@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $530_MinimumAbsoluteDifferenceinBST {
     TreeNode pre= null;
     int ans=Integer.MAX_VALUE;

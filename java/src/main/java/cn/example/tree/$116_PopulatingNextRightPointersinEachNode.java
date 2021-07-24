@@ -1,5 +1,8 @@
 package cn.example.tree;
 
+import cn.example.common.Node;
+
+
 class $116_PopulatingNextRightPointersinEachNode {
     public Node connect(Node root) {
         if (root == null) return null;

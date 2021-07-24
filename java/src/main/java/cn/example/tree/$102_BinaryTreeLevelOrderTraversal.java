@@ -47,7 +47,7 @@ class $102_BinaryTreeLevelOrderTraversal {
 
 
 //recursion
-class $102_BinaryTreeLevelOrderTraversal {
+class $102_BinaryTreeLevelOrderTraversal1 {
     List<List<Integer>> levels = new ArrayList<List<Integer>>();
 
     public void helper(TreeNode node, int level) {

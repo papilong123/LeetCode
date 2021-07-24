@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $129_SumRoottoLeafNumbers {
     int sum=0;
 

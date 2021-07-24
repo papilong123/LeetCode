@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $236_LowestCommonAncestorofaBinaryTree {
     private TreeNode ans=null;
 

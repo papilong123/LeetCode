@@ -1,6 +1,11 @@
 package cn.example.tree;
 
-class $589_N-aryTreePreorderTraversal {
+import cn.example.common.Node;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class $589_NaryTreePreorderTraversal {
     List<Integer> res = new ArrayList<Integer>();
     public List<Integer> preorder(Node root) {
         inOrder(root);

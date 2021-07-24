@@ -1,6 +1,12 @@
 package cn.example.tree;
 
-class $559_MaximumDepthofN-aryTree {
+import cn.example.common.Node;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+class $559_MaximumDepthofNarryTree {
     public int maxDepth(Node root) {
         if(root==null){
             return 0;

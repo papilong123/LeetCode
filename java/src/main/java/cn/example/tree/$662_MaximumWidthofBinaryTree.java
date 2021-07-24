@@ -1,8 +1,10 @@
 package cn.example.tree;
 
+import cn.example.common.AnnotatedNode;
 import cn.example.common.TreeNode;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 class $662_MaximumWidthofBinaryTree {
     public int widthOfBinaryTree(TreeNode root) {
@@ -23,4 +25,5 @@ class $662_MaximumWidthofBinaryTree {
         }
         return ans;
     }
+
 }

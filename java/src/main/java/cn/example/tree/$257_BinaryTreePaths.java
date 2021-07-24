@@ -1,5 +1,10 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
+import java.util.LinkedList;
+import java.util.List;
+
 class $257_BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {
         LinkedList<String> paths=new LinkedList<String>();

@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $543_DiameterofBinaryTree {
     int ans=1;
     public int diameterOfBinaryTree(TreeNode root) {

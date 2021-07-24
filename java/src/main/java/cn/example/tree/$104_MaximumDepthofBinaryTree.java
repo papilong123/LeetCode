@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 /**
  * Definition for a binary cn.example.tree node.
  * public class TreeNode {
@@ -23,7 +25,7 @@ class $104_MaximumDepthofBinaryTree {
 
 
 //good idea recursion
-class $104_MaximumDepthofBinaryTree {
+class $104_MaximumDepthofBinaryTree1 {
     int max = 0;
     int depth = 0;
 

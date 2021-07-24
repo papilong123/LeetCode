@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $222_CountCompleteTreeNodes {
     public int countNodes(TreeNode root) {
         if(root==null) return 0;

@@ -1,6 +1,11 @@
 package cn.example.tree;
 
-class $590_N-aryTreePostorderTraversal {
+import cn.example.common.Node;
+
+import java.util.LinkedList;
+import java.util.List;
+
+class $590_NaryTreePostorderTraversal {
     public List<Integer> postorder(Node root) {
     LinkedList<Integer> ans=new LinkedList<>();
     LinkedList<Node> s=new LinkedList<>();

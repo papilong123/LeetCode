@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 /**
  * Definition for a binary cn.example.tree node.
  * public class TreeNode {

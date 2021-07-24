@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $623_AddOneRowtoTree {
     public TreeNode addOneRow(TreeNode root, int v, int d) {
         if(d==1){

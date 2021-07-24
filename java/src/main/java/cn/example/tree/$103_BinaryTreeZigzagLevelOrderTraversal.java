@@ -1,5 +1,12 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Definition for a binary cn.example.tree node.
  * public class TreeNode {

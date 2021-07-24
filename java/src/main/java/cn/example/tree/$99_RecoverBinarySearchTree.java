@@ -5,7 +5,7 @@ import cn.example.common.TreeNode;
 import java.util.Deque;
 import java.util.LinkedList;
 
-class $155_MinStack {
+class $99_RecoverBinarySearchTree {
     public void recoverTree(TreeNode root) {
         TreeNode firstnode=null;
         TreeNode secondnode=null;

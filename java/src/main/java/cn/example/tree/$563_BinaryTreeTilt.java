@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $563_BinaryTreeTilt {
     int tilt=0;
     public int findTilt(TreeNode root) {

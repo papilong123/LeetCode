@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.Node;
+
 class $117_PopulatingNextRightPointersinEachNodeII {
     public Node connect(Node root) {
         Node p=root;

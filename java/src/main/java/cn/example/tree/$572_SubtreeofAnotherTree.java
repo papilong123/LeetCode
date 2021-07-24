@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $572_SubtreeofAnotherTree {
     public boolean isSubtree(TreeNode s, TreeNode t) {
         if(s==null&&t==null) return true;

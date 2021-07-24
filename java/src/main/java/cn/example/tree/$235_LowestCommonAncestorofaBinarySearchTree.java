@@ -1,5 +1,7 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $235_LowestCommonAncestorofaBinarySearchTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         int parval=root.val;

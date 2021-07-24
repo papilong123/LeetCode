@@ -1,12 +1,14 @@
 package cn.example.tree;
 
+import cn.example.common.TreeNode;
+
 class $230_KthSmallestElementinaBST {
     private int val=0;
     private int i=0;
 
     public int kthSmallest(TreeNode root, int k) {
         helper(root,k);
-        return ;
+        return k;
     }
     public void helper(TreeNode root, int k){
         if(root!=null){
