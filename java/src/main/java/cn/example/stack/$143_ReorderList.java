@@ -9,30 +9,26 @@ public class $143_ReorderList {
         Stack<ListNode> st = new Stack<ListNode>();
         ListNode dummyNode = new ListNode(0);
         dummyNode.next = head;
+        ListNode p = dummyNode;
         while(head != null && head.next != null){
-            st.push(head.next);
-            head.next = head.next.next;
-            head = head.next;
+            head = head.next.next;
+            p = p.next;
+        }
+
+        p = head.next;
+        head.next = null;
+        while(p != null){
+            st.push(p);
+            p = p.next;
         }
 
         head = dummyNode.next;
         while(! st.empty()){
-            ListNode p = st.pop();
+            p = st.pop();
             p.next = head.next;
             head.next = p;
             head = head.next.next;
         }
     }
 
-    public static void main(String[] args) {
-        $143_ReorderList solution = new $143_ReorderList();
-        ListNode arr = new ListNode(1);
-        for(int i = 2; i < 5; i++){
-            arr.next = new ListNode(i);
-            arr = arr.next;
-        }
-        System.out.println(arr);
-        solution.reorderList(arr);
-        System.out.println(arr);
-    }
 }
