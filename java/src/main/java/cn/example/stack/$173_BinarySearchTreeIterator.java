@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class $173_BinarySearchTreeIterator {
     Deque<TreeNode> stack = new LinkedList<>();
-    TreeNode p = new TreeNode();
+    TreeNode p;
 
     public $173_BinarySearchTreeIterator(TreeNode root) {
         p = root;
