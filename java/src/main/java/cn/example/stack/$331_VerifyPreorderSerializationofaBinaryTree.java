@@ -22,8 +22,8 @@ public class $331_VerifyPreorderSerializationofaBinaryTree {
         return stack.size()  == 1 && stack.get(0).equals("#");
     }
 
-    public static void main(String[] args) {
-        $331_VerifyPreorderSerializationofaBinaryTree test = new $331_VerifyPreorderSerializationofaBinaryTree();
-        System.out.println(test.isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"));
-    }
+//    public static void main(String[] args) {
+//        $331_VerifyPreorderSerializationofaBinaryTree test = new $331_VerifyPreorderSerializationofaBinaryTree();
+//        System.out.println(test.isValidSerialization("9,3,4,#,#,1,#,#,2,#,6,#,#"));
+//    }
 }
