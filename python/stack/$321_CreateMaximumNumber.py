@@ -1,6 +1,7 @@
 from typing import List
 
 
+# 分而治之
 class Solution:
     def maxNumber(self, nums1: List[int], nums2: List[int], k: int) -> List[int]:
         return max(self.merge(self.pick_max(nums1, i), self.pick_max(nums2, k - i)) for i in range(k + 1) if
