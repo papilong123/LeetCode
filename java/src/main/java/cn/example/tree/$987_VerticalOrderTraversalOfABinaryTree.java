@@ -4,33 +4,30 @@ import cn.example.common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class $987_VerticalOrderTraversalOfABinaryTree {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<int[]> arr = new ArrayList<>();
         dfs(root, 0, 0, arr);
-        Collections.sort(arr, new Comparator<int[]>(){
-            public int compare(int[] tuple1, int[] tuple2){
-                if(tuple1[0] != tuple2[0]){
-                    return tuple1[0] - tuple2[0];
-                }else if (tuple1[1] != tuple2[1]){
-                    return tuple1[1] - tuple2[1];
-                }else {
-                    return tuple1[2] - tuple2[2];
-                }
+        Collections.sort(arr, (tuple1, tuple2) -> {
+            if(tuple1[0] != tuple2[0]){
+                return tuple1[0] - tuple2[0];
+            }else if (tuple1[1] != tuple2[1]){
+                return tuple1[1] - tuple2[1];
+            }else {
+                return tuple1[2] - tuple2[2];
             }
         });
 
-        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        List<List<Integer>> res = new ArrayList<>();
         int size = 0;
         int lastCol = Integer.MIN_VALUE;
         for (int[] tuple : arr) {
             int col = tuple[0], row = tuple[1], value = tuple[2];
             if (col != lastCol) {
                 lastCol = col;
-                res.add(new ArrayList<Integer>());
+                res.add(new ArrayList<>());
                 size++;
             }
             res.get(size - 1).add(value);
