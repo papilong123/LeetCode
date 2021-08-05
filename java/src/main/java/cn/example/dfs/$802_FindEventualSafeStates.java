@@ -3,6 +3,7 @@ package cn.example.dfs;
 import java.util.ArrayList;
 import java.util.List;
 
+// dfs加三色标记法
 public class $802_FindEventualSafeStates {
     public List<Integer> eventualSafeNodes(int[][] graph){
         List<Integer> res = new ArrayList<>();
