@@ -1,6 +1,7 @@
 from typing import List
 
 
+# dfs加三色标记法
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
         n = len(graph)
