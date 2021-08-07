@@ -27,4 +27,9 @@ public class $611_ValidTriangleNumber {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        int ans = new $611_ValidTriangleNumber().triangleNumber(new int[]{3,1,2,3,3,3,3});
+        System.out.println();
+    }
 }
