@@ -9,9 +9,9 @@ public class $33_SearchInRotatedSortedArray {
                 return mid;
 //            先判断在那个区内，mid将整个区域分为两块，[0, mid - 1]和[mid + 1, n-1]
 //            比较中值和左端点，如果中值大于等于左端点nums[0]，则mid左边完全排序
-            }else if(nums[mid] >= nums[0]){
+            }else if(nums[mid] >= nums[i]){
 //                mid左边全部有序，若target在有序的一块，则舍弃右边部分有序的一块
-                if(target >= nums[0] && target < nums[mid]){
+                if(target >= nums[i] && target < nums[mid]){
                     j = mid - 1;
                 }else{
                     i = mid + 1;
@@ -19,7 +19,7 @@ public class $33_SearchInRotatedSortedArray {
 //            mid右边完全有序
             }else {
 //                若target在全部有序的一块
-                if(target > nums[mid] && target <= nums[n-1]){
+                if(target > nums[mid] && target <= nums[j]){
                     i = mid + 1;
                 }else {
                     j = mid - 1;
