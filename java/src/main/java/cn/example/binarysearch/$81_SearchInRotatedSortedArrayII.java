@@ -36,4 +36,9 @@ public class $81_SearchInRotatedSortedArrayII {
         return false;
 
     }
+
+    public static void main(String[] args) {
+        boolean ans = new $81_SearchInRotatedSortedArrayII().search(new int[]{3,1,2,3,3,3,3}, 2);
+        System.out.println();
+    }
 }
