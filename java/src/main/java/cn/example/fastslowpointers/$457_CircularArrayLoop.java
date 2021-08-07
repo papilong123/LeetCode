@@ -1,4 +1,4 @@
-package cn.example.twopointers;
+package cn.example.fastslowpointers;
 
 public class $457_CircularArrayLoop {
 

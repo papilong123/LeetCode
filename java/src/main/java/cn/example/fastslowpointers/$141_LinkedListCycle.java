@@ -1,4 +1,4 @@
-package cn.example.twopointers;
+package cn.example.fastslowpointers;
 
 import cn.example.common.ListNode;
 
