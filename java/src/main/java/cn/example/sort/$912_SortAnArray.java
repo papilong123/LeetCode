@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 十大排序算法
  * https://www.cnblogs.com/guoyaohua/p/8600214.html
  */
-public class SortAlgorithm {
+public class $912_SortAnArray {
 
     /**
      * 冒泡排序
