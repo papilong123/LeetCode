@@ -3,6 +3,9 @@ package cn.leetcode.stack;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * 反序遍历的单减栈，出栈时保留最大值
+ */
 public class $456_132Pattern {
     public boolean find132pattern(int[] nums) {
         int n = nums.length;
@@ -10,7 +13,7 @@ public class $456_132Pattern {
         int k = Integer.MIN_VALUE;
         for (int i = n - 1; i >= 0; i--) {
             if (nums[i] < k) return true;
-            while (!d.isEmpty() && d.peekLast() < nums[i]) {
+            while (!d.isEmpty() && d.peekLast() < nums[i]) {  // 递减栈
                 // 事实上，k 的变化也具有单调性，直接使用 k = pollLast() 也是可以的
                 k = Math.max(k, d.pollLast());
             }
