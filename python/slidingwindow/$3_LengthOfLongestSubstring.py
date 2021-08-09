@@ -6,21 +6,21 @@ class Solution:
         """
         from collections import defaultdict
         lookup = defaultdict(int)
-        start = 0
-        end = 0
+        left = 0
+        right = 0
         max_len = 0
-        counter = 0
-        while end < len(s):
-            if lookup[s[end]] > 0:
-                counter += 1
-            lookup[s[end]] += 1
-            end += 1
-            while counter > 0:
-                if lookup[s[start]] > 1:
-                    counter -= 1
-                lookup[s[start]] -= 1
-                start += 1
-            max_len = max(max_len, end - start)
+        cnt = 0
+        while right < len(s):
+            if lookup[s[right]] > 0:
+                cnt += 1
+            lookup[s[right]] += 1
+            right += 1
+            while cnt > 0:
+                if lookup[s[left]] > 1:
+                    cnt -= 1
+                lookup[s[left]] -= 1
+                left += 1
+            max_len = max(max_len, right - left)
         return max_len
 
 
