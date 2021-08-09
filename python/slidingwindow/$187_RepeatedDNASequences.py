@@ -1,6 +1,7 @@
 from typing import List
 
 
+# 不需要用滑动窗口，哈希集合就能解决
 class Solution:
     def findRepeatedDnaSequences(self, s: str) -> List[str]:
         L, n = 10, len(s)
