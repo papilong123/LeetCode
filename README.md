@@ -6,7 +6,7 @@
 - [$159_至多包含两个不同字符的最长子串](/python/sliding_window/$159_LongestSubstringwithAtMostTwoDistinctCharacters.py)
 - [$187_重复的DNA序列](/python/sliding_window/$187_RepeatedDNASequences.py)(更适合使用hashmap)
 - [$209_长度最小的子数组](/python/sliding_window/$209_MinimumSizeSubarraySum.py)
-- [$219_存在重复元素II](/python/sliding_window/$219_ContainsDuplicateII.py)(更适合用hashmap)
+- [$219_存在重复元素II](/python/sliding_window/$219_ContainsDuplicateII.py)(窗口长度固定)
 - [$220_存在重复元素III](/python/sliding_window/$220_ContainsDuplicateIII.py)
 
 ### 单调栈
