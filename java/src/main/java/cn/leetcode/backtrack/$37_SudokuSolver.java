@@ -1,105 +1,67 @@
 package cn.leetcode.backtrack;
 
 public class $37_SudokuSolver {
-    // 二进制中1表示 对应位置已经有值了
-    private int[] rows = new int[9];
-    private int[] cols = new int[9];
-    private int[][] cells = new int[3][3];
-
     public void solveSudoku(char[][] board) {
-        int cnt = 0;
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                char c = board[i][j];
-                if (c == '.') {
-                    cnt++;
-                } else {
-                    int n = c - '1';
-                    // rows[i] |= (1 << n);
-                    // cols[j] |= (1 << n);
-                    // cells[i/3][j/3] |= (1 << n);
-                    fillNumber(i, j, n, true);
+        solveSudokuHelper(board);
+    }
+
+    private boolean solveSudokuHelper(char[][] board){
+        //「一个for循环遍历棋盘的行，一个for循环遍历棋盘的列，
+        // 一行一列确定下来之后，递归遍历这个位置放9个数字的可能性！」
+        for (int i = 0; i < 9; i++){ // 遍历行
+            for (int j = 0; j < 9; j++){ // 遍历列
+                if (board[i][j] != '.'){ // 跳过原始数字
+                    continue;
                 }
-            }
-        }
-        backtrace(board, cnt);
-    }
-
-    private boolean backtrace(char[][] board, int cnt) {
-        if (cnt == 0) {
-            return true;
-        }
-        // 获取当前 候选项最少（即限制最多）的格子下标
-        int[] pos = getMinOkMaskCountPos(board);
-        int x = pos[0], y = pos[1];
-        // okMask 值为1的 位 表示 对应的数字 当前可以填入
-        int okMask = getOkMask(x, y);
-
-        for (char c = '1'; c <= '9'; c++) {
-            int index = c - '1';
-            if (testMask(okMask, index)) {
-                fillNumber(x, y, index, true);
-                board[x][y] = c;
-                if (backtrace(board, cnt - 1)) return true; // 题目假定唯一解
-                board[x][y] = '.';
-                fillNumber(x, y, index, false);
-            }
-        }
-
-        return false;
-    }
-
-    // n 0..8
-    private void fillNumber(int x, int y, int n, boolean fill) {
-        // 因为回溯先选择后撤销，所以fill先true后false, false时对应位置一定是1，所以异或可行
-        // rows[x] = fill ? rows[x] | (1<<n) : rows[x] ^ (1<<n);
-        // cols[y] = fill ? cols[y] | (1<<n) : cols[y] ^ (1<<n);
-        // cells[x/3][y/3] = fill ? cells[x/3][y/3] | (1<<n) : cells[x/3][y/3] ^ (1<<n);
-
-        // ture set 1, false set 0
-        rows[x] = fill ? rows[x] | (1 << n) : rows[x] & ~(1 << n);
-        cols[y] = fill ? cols[y] | (1 << n) : cols[y] & ~(1 << n);
-        cells[x / 3][y / 3] = fill ? cells[x / 3][y / 3] | (1 << n) : cells[x / 3][y / 3] & ~(1 << n);
-    }
-
-    private int getOkMask(int x, int y) {
-        return ~(rows[x] | cols[y] | cells[x / 3][y / 3]);
-    }
-
-    // mask 二进制 低9位 中 1的个数
-    private int getOneCountInMask(int mask) {
-        int res = 0;
-        for (int i = 0; i < 9; i++) {
-            int test = 1 << i;
-            if ((mask & test) != 0) {
-                res++;
-            }
-        }
-        return res;
-    }
-
-    // mask 二进制 低index位 是否为 1
-    private boolean testMask(int mask, int index) {
-        return (mask & (1 << index)) != 0;
-    }
-
-    // 获取候选项最少的位置
-    private int[] getMinOkMaskCountPos(char[][] board) {
-        int[] res = new int[2];
-        int min = 10;
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                if (board[i][j] == '.') {
-                    int okMask = getOkMask(i, j);
-                    int count = getOneCountInMask(okMask);
-                    if (count < min) {
-                        min = count;
-                        res[0] = i;
-                        res[1] = j;
+                for (char k = '1'; k <= '9'; k++){ // (i, j) 这个位置放k是否合适
+                    if (isValidSudoku(i, j, k, board)){
+                        board[i][j] = k;
+                        if (solveSudokuHelper(board)){ // 如果找到合适一组立刻返回
+                            return true;
+                        }
+                        board[i][j] = '.';
                     }
                 }
+                // 9个数都试完了，都不行，那么就返回false
+                return false;
+                // 因为如果一行一列确定下来了，这里尝试了9个数都不行，说明这个棋盘找不到解决数独问题的解！
+                // 那么会直接返回， 「这也就是为什么没有终止条件也不会永远填不满棋盘而无限递归下去！」
             }
         }
-        return res;
+        // 遍历完没有返回false，说明找到了合适棋盘位置了
+        return true;
     }
+
+    /**
+     * 判断棋盘是否合法有如下三个维度:
+     *     同行是否重复
+     *     同列是否重复
+     *     9宫格里是否重复
+     */
+    private boolean isValidSudoku(int row, int col, char val, char[][] board){
+        // 同行是否重复
+        for (int i = 0; i < 9; i++){
+            if (board[row][i] == val){
+                return false;
+            }
+        }
+        // 同列是否重复
+        for (int j = 0; j < 9; j++){
+            if (board[j][col] == val){
+                return false;
+            }
+        }
+        // 9宫格里是否重复
+        int startRow = (row / 3) * 3;
+        int startCol = (col / 3) * 3;
+        for (int i = startRow; i < startRow + 3; i++){
+            for (int j = startCol; j < startCol + 3; j++){
+                if (board[i][j] == val){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
 }
