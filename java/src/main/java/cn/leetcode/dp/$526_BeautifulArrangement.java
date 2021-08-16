@@ -1,5 +1,9 @@
 package cn.leetcode.dp;
 
+
+/**
+ * 状态压缩
+ */
 public class $526_BeautifulArrangement {
     public int countArrangement(int n) {
         int[] f = new int[1 << n];
