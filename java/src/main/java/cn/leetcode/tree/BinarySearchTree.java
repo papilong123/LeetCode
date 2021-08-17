@@ -3,6 +3,7 @@ package cn.leetcode.tree;
 import cn.leetcode.common.TreeNode;
 
 public class BinarySearchTree {
+    // https://leetcode-cn.com/problems/same-tree/solution/xie-shu-suan-fa-de-tao-lu-kuang-jia-by-wei-lai-bu-/
     // 98. 验证是否是二叉搜索树
     public boolean isValidBST(TreeNode root) {
         return isValidBSTHelper(root, Long.MIN_VALUE, Long.MAX_VALUE);
