@@ -1,4 +1,4 @@
-package cn.leetcode.stack;
+package cn.leetcode.stack.parentheses;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
