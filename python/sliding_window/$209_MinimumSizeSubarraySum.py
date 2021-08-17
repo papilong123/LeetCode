@@ -4,20 +4,20 @@ from typing import List
 
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        left, right = 0, 0
+        start, end = 0, 0
         counter = defaultdict(int)
-        ans, _sum = float('inf'), 0
+        ans, sum = float('inf'), 0
         flag = False
-        while right < len(nums):
-            _sum += nums[right]
-            counter[nums[right]] += 1
-            right += 1
-            while _sum >= target:
+        while end < len(nums):
+            sum += nums[end]
+            counter[nums[end]] += 1
+            end += 1
+            while sum >= target:
                 flag = True
-                ans = min(ans, right - left)
-                _sum -= nums[left]
-                counter[nums[left]] -= 1
-                left += 1
+                ans = min(ans, end - start)
+                sum -= nums[start]
+                counter[nums[start]] -= 1
+                start += 1
         return ans if flag else 0
 
 
