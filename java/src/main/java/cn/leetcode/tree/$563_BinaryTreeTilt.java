@@ -10,10 +10,10 @@ class $563_BinaryTreeTilt {
     }
 
     public int helper(TreeNode root){
-        if(root==null) return 0;
-        int left=helper(root.left);
-        int right=helper(root.right);
-        tilt+=Math.abs(left-right);
-        return left+right+root.val;
+        if (root == null) return 0;
+        int left = helper(root.left);
+        int right = helper(root.right);
+        tilt += Math.abs(left - right);
+        return left + right + root.val;
     }
 }
