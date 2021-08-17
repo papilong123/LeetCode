@@ -7,12 +7,14 @@ class UnionFind:
         # 当前连通分量数目
         self.setCount = n
 
+    # 找到根节点
     def findset(self, x: int) -> int:
         if self.parent[x] == x:
             return x
         self.parent[x] = self.findset(self.parent[x])
         return self.parent[x]
 
+    # 合并x，y所处的两个集合
     def unite(self, x: int, y: int) -> bool:
         x, y = self.findset(x), self.findset(y)
         if x == y:
@@ -24,6 +26,7 @@ class UnionFind:
         self.setCount -= 1
         return True
 
+    # 判断是否连接
     def connected(self, x: int, y: int) -> bool:
         x, y = self.findset(x), self.findset(y)
         return x == y
