@@ -1,4 +1,4 @@
-package cn.leetcode.dp;
+package cn.leetcode.dp.palindromic;
 
 public class $516_LongestPalindromicSubsequence {
     public int longestPalindromeSubseq(String s) {
