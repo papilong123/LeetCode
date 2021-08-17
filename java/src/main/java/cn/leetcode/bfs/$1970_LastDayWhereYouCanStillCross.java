@@ -1,4 +1,4 @@
-package cn.leetcode.unionfind;
+package cn.leetcode.bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
