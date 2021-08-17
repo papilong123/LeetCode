@@ -29,7 +29,7 @@ public class $552_StudentAttendanceRecordII {
         for (int i = 0; i < s.length() && count < 2; i++)
             if (s.charAt(i) == 'A')
                 count++;
-        return s.length() > 0 && count < 2 && s.indexOf("LLL") < 0;
+        return s.length() > 0 && count < 2 && !s.contains("LLL");
     }
 
     // 方法 2：使用递归公式 [Time Limit Exceeded]
