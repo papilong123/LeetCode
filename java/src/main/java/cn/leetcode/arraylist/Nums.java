@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 public class Nums {
     // 209. 长度最小的子数组,找出该数组中满足其和 ≥ target 的长度最小的 连续子数组 [numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度

@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $27_RemoveElement {
     public int removeElement(int[] nums, int val) {

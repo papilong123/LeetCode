@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $26_RemoveDuplicatesFromromSortedArray {
     public int removeDuplicates(int[] nums) {

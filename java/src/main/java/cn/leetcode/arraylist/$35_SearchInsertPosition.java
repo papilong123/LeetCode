@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $35_SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {

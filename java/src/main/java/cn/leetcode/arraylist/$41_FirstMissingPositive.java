@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $41_FirstMissingPositive {
     public int firstMissingPositive(int[] nums) {

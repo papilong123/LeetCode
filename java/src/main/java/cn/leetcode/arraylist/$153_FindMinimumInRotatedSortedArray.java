@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $153_FindMinimumInRotatedSortedArray {
     public int findMin(int[] nums) {

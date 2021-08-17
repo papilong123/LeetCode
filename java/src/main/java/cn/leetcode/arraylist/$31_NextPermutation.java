@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $31_NextPermutation {
     public void nextPermutation(int[] nums) {

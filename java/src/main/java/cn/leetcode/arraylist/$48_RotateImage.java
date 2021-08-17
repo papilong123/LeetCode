@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $48_RotateImage {
     public void rotate(int[][] matrix) {

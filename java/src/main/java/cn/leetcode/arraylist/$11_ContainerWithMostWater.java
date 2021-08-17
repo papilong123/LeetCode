@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $11_ContainerWithMostWater {
     public int maxArea(int[] height) {

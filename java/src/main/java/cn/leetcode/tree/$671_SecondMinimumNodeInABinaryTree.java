@@ -2,9 +2,10 @@ package cn.leetcode.tree;
 
 import cn.leetcode.common.TreeNode;
 
-public class $671_SecondMinimumNodeInaBinaryTree {
+public class $671_SecondMinimumNodeInABinaryTree {
     int curVal;
     int res;
+
     public int findSecondMinimumValue(TreeNode root) {
         res = -1;
         curVal = root.val;
@@ -12,7 +13,7 @@ public class $671_SecondMinimumNodeInaBinaryTree {
         return res;
     }
 
-    public void preOrder(TreeNode node){
+    public void preOrder(TreeNode node) {
         if(node != null){
 //            剪枝，res已经更新过一次，碰到大于等于res的直接返回
             if(res != -1 && res <= node.val){

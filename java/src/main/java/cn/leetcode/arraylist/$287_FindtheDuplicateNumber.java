@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 import java.util.HashSet;
 import java.util.Set;

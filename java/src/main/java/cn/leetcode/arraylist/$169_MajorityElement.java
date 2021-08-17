@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $169_MajorityElement {
     public int majorityElement(int[] nums) {

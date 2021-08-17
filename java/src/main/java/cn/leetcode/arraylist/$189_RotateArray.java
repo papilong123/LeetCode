@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $189_RotateArray {
     public void reverse(int[] nums, int a, int b){

@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $63_UniquePathsII {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {

@@ -1,4 +1,4 @@
-package cn.leetcode.array;
+package cn.leetcode.arraylist;
 
 class $283_MoveZeroes {
     public void moveZeroes(int[] nums) {
