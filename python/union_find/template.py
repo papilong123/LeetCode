@@ -1,4 +1,4 @@
-# 并查集模板
+# 并查集模板,检查图存不存在一个环
 class UnionFind:
     def __init__(self, n: int):
         self.parent = list(range(n))
