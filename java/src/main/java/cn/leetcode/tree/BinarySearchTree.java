@@ -23,7 +23,6 @@ public class BinarySearchTree {
         if (root == null || val == root.val) return root;
 
         return val < root.val ? searchBST(root.left, val) : searchBST(root.right, val);
-
     }
 
     // 701. 二叉搜索树中的插入操作
