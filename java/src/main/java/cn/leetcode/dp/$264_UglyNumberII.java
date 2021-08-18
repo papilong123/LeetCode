@@ -27,8 +27,8 @@ public class $264_UglyNumberII {
 
     public int nthUglyNumber1(int n) {
         int[] factors = {2, 3, 5};
-        Set<Long> seen = new HashSet<Long>();
-        PriorityQueue<Long> heap = new PriorityQueue<Long>();
+        Set<Long> seen = new HashSet<>();
+        PriorityQueue<Long> heap = new PriorityQueue<>();
         seen.add(1L);
         heap.offer(1L);
         int ugly = 0;
