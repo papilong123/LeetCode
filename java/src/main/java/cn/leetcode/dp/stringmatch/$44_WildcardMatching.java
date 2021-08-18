@@ -1,4 +1,4 @@
-package cn.leetcode.dp;
+package cn.leetcode.dp.stringmatch;
 
 public class $44_WildcardMatching {
     public boolean isMatch(String s, String p) {
