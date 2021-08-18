@@ -1,4 +1,4 @@
-package cn.leetcode.dp;
+package cn.leetcode.dp.houserobber;
 
 class $198_HouseRobber {
     public int rob(int[] nums) {

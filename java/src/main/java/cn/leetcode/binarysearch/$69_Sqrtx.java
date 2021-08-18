@@ -1,4 +1,4 @@
-package cn.leetcode.math;
+package cn.leetcode.binarysearch;
 
 public class $69_Sqrtx {
     public int mySqrt(int x) {

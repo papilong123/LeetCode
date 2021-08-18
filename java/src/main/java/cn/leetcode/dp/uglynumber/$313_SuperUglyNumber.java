@@ -1,4 +1,4 @@
-package cn.leetcode.dp;
+package cn.leetcode.dp.uglynumber;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package cn.leetcode.stack;
+package cn.leetcode.stack.monotone;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

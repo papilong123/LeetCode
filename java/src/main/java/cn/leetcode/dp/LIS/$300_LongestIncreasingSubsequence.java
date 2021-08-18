@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class $300_LongestIncreasingSubsequence {
 
-//    贪心加二分，O(nlog(n))，最快解法
+    // dp + 二分 最快解法 O(nlog(n))
     public  int lengthOfLIS(int[] nums){
         int len = 1, n = nums.length;
         if (n == 0) {
@@ -32,7 +32,7 @@ public class $300_LongestIncreasingSubsequence {
         return len;
     }
 
-    //    动态规划O(n^2)
+    // dp O(n^2)
     public int lengthOfLIS1(int[] nums) {
         int n = nums.length;
         int[] dp = new int[n];

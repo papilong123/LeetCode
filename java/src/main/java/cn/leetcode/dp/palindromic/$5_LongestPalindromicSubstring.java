@@ -1,5 +1,6 @@
 package cn.leetcode.dp.palindromic;
 
+// 后效性dp
 public class $5_LongestPalindromicSubstring {
     public String longestPalindrome(String s) {
         int n = s.length();
@@ -15,10 +16,10 @@ public class $5_LongestPalindromicSubstring {
                 }
 
                 if (s.charAt(i) != s.charAt(j)) {
-                    f[i][j] = false;
+                    f[i][j] = false; // 不相等必然不是回文串
                 } else {
-                    if (j - i < 3) {
-                        f[i][j] = true;
+                    if (j - i <= 2) {
+                        f[i][j] = true; // 初始化在两个i=j和j-i=1主对角线
                     } else {
                         f[i][j] = f[i + 1][j - 1];
                     }
