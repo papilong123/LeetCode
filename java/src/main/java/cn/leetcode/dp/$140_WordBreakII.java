@@ -66,7 +66,7 @@ public class $140_WordBreakII {
         List<String> res = new ArrayList<>();
         if (dp[len]) {
             Deque<String> path = new ArrayDeque<>();
-            dfs(s, len, wordSet, dp, path, res);
+            dfs(len, s, wordSet, dp, path, res);
             return res;
         }
         return res;
@@ -82,7 +82,7 @@ public class $140_WordBreakII {
      * @param path    从叶子结点到根结点的路径
      * @param res     保存所有结果的变量
      */
-    private void dfs(String s, int len, Set<String> wordSet, boolean[] dp, Deque<String> path, List<String> res) {
+    private void dfs(int len, String s, Set<String> wordSet, boolean[] dp, Deque<String> path, List<String> res) {
         if (len == 0) {
             res.add(String.join(" ", path));
             return;
@@ -93,9 +93,22 @@ public class $140_WordBreakII {
             String suffix = s.substring(i, len);
             if (wordSet.contains(suffix) && dp[i]) {
                 path.addFirst(suffix);
-                dfs(s, i, wordSet, dp, path, res);
+                dfs(i, s, wordSet, dp, path, res); // 注意，这里i不变
                 path.removeFirst();
             }
         }
     }
+
+    public static void main(String[] args) {
+        ArrayList<String> str = new ArrayList<String>() {{
+            add("cat");
+            add("cats");
+            add("and");
+            add("sand");
+            add("dog");
+        }};
+        List<String> res = new $140_WordBreakII().wordBreakBacktrack("catsanddog", str);
+        System.out.println(res);
+    }
+
 }
