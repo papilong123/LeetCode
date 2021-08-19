@@ -1,4 +1,4 @@
-package cn.leetcode.dp;
+package cn.leetcode.dp.matrixquickpow;
 
 import java.util.Arrays;
 
