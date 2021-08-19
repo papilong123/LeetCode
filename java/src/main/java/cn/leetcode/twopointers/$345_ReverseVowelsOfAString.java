@@ -1,4 +1,4 @@
-package cn.leetcode.string;
+package cn.leetcode.twopointers;
 
 public class $345_ReverseVowelsOfAString {
     public String reverseVowels(String s) {
