@@ -13,6 +13,8 @@ trie树（涉及到二进制数相关问题，还是AC自动机的基础）、tr
 
 #### 背包问题
 
+[背包微信](https://mp.weixin.qq.com/s/ZOehl3U1mDiyOQjFG1wNJA)
+[力扣](https://leetcode-cn.com/problems/word-break/solution/dai-ma-sui-xiang-lu-139-dan-ci-chai-fen-50a1a/)
 01背包、完全背包、多重背包、分组背包、树上分组背包。
 
 #### 动态规划
