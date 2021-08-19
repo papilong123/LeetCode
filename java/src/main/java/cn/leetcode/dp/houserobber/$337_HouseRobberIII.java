@@ -11,6 +11,7 @@ public class $337_HouseRobberIII {
 
     public int rob(TreeNode root) {
         dfs(root);
+        // 根节点选还是不选两种情况
         return Math.max(f.getOrDefault(root, 0), g.getOrDefault(root, 0));
     }
 
