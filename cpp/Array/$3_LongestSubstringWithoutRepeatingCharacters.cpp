@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int lengthOfLongestSubstring(cn.example.string s) {
+    int lengthOfLongestSubstring(string s) {
         int n=s.size();
         if(n==0) return 0;
 
@@ -17,4 +17,8 @@ public:
         }
         return ans;
     }
+
 };
+int main(){
+    lengthOfLongestSubstring("ads");
+}

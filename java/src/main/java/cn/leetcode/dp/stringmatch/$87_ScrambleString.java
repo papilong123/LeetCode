@@ -73,6 +73,7 @@ public class $87_ScrambleString {
     }
 
     // 方法二、区间dp
+    // f[i][j][len] 代表 s1 从 i 开始，s2 从 j 开始，后面长度为 len 的字符是否能形成「扰乱字符串」（互为翻转）
     public boolean isScrambleDp(String s1, String s2) {
         if (s1.equals(s2)) return true;
         if (s1.length() != s2.length()) return false;
