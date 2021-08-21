@@ -1,4 +1,4 @@
-package cn.leetcode.dp.knapsack.complete;
+package cn.leetcode.dp.knapsack.complete.methodnum;
 
 public class $70_ClimbingStairs {
     // 1阶，2阶，m阶就是物品，楼顶就是背包。 每一阶可以重复使用，例如跳了1阶，还可以继续跳1阶。

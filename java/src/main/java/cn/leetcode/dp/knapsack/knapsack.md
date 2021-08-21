@@ -1,23 +1,25 @@
 ### 背包问题
 
-#### 01背包
+#### 背包问法
 
 问能否能装满背包（或者最多装多少）：dp[j] = max(dp[j], dp[j - nums[i]] + nums[i]); ，对应题目如下：
-[动态规划：416.分割等和子集]()
-[动态规划：1049.最后一块石头的重量 II]()
+[动态规划：416.分割等和子集]($01/fillpackagecomplete/$416_PartitionEqualSubsetSum.java)
+[动态规划：1049.最后一块石头的重量 II]($01/fillpackagecomplete/$1049_LastStoneWeightII.java)
 
 问装满背包有几种方法：dp[j] += dp[j - nums[i]] ，对应题目如下：
 [动态规划：494.目标和]()
-[动态规划：518. 零钱兑换 II]()
-[动态规划：377.组合总和Ⅳ]()
-[动态规划：70. 爬楼梯进阶版（完全背包）]()
+[动态规划：518. 零钱兑换 II](complete/methodnum/$518_CoinChange2.java)
+[动态规划：377.组合总和Ⅳ](complete/methodnum/$377_CombinationSumIV.java)
+[动态规划：70. 爬楼梯进阶版（完全背包）](complete/methodnum/$70_ClimbingStairs.java)
 
 问背包装满最大价值：dp[j] = max(dp[j], dp[j - weight[i]] + value[i]); ，对应题目如下：
-[动态规划：474.一和零]()
+[动态规划：474.一和零]($01/maxvalue/$474_OnesAndZeroes.java)
 
 问装满背包所有物品的最小个数：dp[j] = min(dp[j - coins[i]] + 1, dp[j]); ，对应题目如下：
-[动态规划：322.零钱兑换]()
-[动态规划：279.完全平方数](complete/$279_PerfectSquares.java)
+[动态规划：322.零钱兑换](complete/minthings/$322_CoinChange.java)
+[动态规划：279.完全平方数](complete/minthings/$279_PerfectSquares.java)
+
+#### 01背包
 
 #### 完全背包
 

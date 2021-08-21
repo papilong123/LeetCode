@@ -1,4 +1,4 @@
-package cn.leetcode.dp.knapsack.complete;
+package cn.leetcode.dp.knapsack.complete.minthings;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package cn.leetcode.memoization;
+package cn.leetcode.dp;
 
 public class $1137_NthTribonacciNumber {
     public int tribonacci(int n) {
