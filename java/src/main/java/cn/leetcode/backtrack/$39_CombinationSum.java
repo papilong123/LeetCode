@@ -28,12 +28,8 @@ public class $39_CombinationSum {
         }
 
         for(int i = begin; i < length; i++){
-
-
             path.addLast(candidates[i]);
-
             dfs(candidates, length, i, target-candidates[i], path, res);
-
             path.removeLast();
         }
     }
