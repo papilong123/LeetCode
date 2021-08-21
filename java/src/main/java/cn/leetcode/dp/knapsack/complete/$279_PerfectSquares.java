@@ -1,4 +1,4 @@
-package cn.leetcode.dp;
+package cn.leetcode.dp.knapsack.complete;
 
 public class $279_PerfectSquares {
     public int numSquares(int n) {
