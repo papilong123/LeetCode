@@ -1,4 +1,4 @@
-package cn.leetcode.cache;
+package cn.leetcode.cache.explore;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -40,7 +40,7 @@ public class $5841_FindTheLongestValidObstacleCourseAtEachPosition {
     public static void main(String[] args) {
         int[] arr = new int[]{2,2,1};
         int[] ans = new $5841_FindTheLongestValidObstacleCourseAtEachPosition().longestObstacleCourseAtEachPosition(arr);
-        System.out.println();
+        System.out.println(ans[0]);
     }
 
 }
