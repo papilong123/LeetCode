@@ -1,0 +1,7 @@
+n = int(input())
+s = input()
+M = s.find('M')
+left = s.find('T', M, n)
+T = s.rfind('T')
+right = s.rfind('M', 0, T)
+print(s[left + 1: right])
