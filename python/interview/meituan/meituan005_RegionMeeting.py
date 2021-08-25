@@ -12,7 +12,8 @@ def main():
         nonlocal graph, a, k, mod, i
         res = 1
         for v in graph[u]:
-            if v != fa and (a[i] < a[v] or (a[i] == a[v] and i < v)) and a[i] + k >= a[v]:  # 不会形成自环，保证由大到小的排列，范围
+            # 不能指向父节点和比父节点小的元素，范围不能比最初的父节点小
+            if v != fa and (a[i] < a[v] or (a[i] == a[v] and i < v)) and a[i] + k >= a[v]:
                 res *= (dfs(v, u) + 1)
                 res %= mod
         return res
