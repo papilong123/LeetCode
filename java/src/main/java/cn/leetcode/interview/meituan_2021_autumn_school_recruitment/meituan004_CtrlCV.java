@@ -1,4 +1,4 @@
-package cn.leetcode.interview.meituan;
+package cn.leetcode.interview.meituan_2021_autumn_school_recruitment;
 
 import java.io.*;
 
