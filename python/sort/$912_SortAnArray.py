@@ -223,43 +223,19 @@ class Solution(object):
         return nums
 
     # 基数排序
-
-    def radixSort(self, nums):
-        def getbit(x, i):  # 返回x的第i位（从右向左，个位为0）数值
-            y = x // pow(10, i)
-            z = y % 10
-            return z
-
-        def CountSort(nums):
-            n = len(nums)
-            num = max(nums)
-            count = [0] * (num + 1)
-            for i in range(0, n):
-                count[nums[i]] += 1
-            arr = []
-            for i in range(0, num + 1):
-                for j in range(0, count[i]):
-                    arr.append(i)
-            return arr
-
-        Max = max(nums)
-        for k in range(0, int(math.log10(Max)) + 1):  # 对k位数排k次,每次按某一位来排
-            arr = [[] for i in range(0, 10)]
-            for i in nums:  # 将ls（待排数列）中每个数按某一位分类（0-9共10类）存到arr[][]二维数组（列表）中
-                arr[getbit(i, k)].append(i)
-            for i in range(0, 10):  # 对arr[]中每一类（一个列表）  按计数排序排好
-                if len(arr[i]) > 0:
-                    arr[i] = CountSort(arr[i])
-            j = 9
-            n = len(nums)
-            for i in range(0, n):  # 顺序输出arr[][]中数到ls中，即按第k位排好
-                while len(arr[j]) == 0:
-                    j -= 1
-                else:
-                    nums[n - 1 - i] = arr[j].pop()
+    def radixSort(self, nums, radix=10):
+        n = len(str(max(nums)))  # 记录最大值的位数
+        for k in range(n):  # n轮排序
+            # 每一轮生成10个列表
+            bucket_list = [[] for i in range(10)]  # 因为每一位数字都是0~9，故建立10个桶
+            for i in nums:
+                # 按第k位放入到桶中
+                bucket_list[i // (10 ** k) % 10].append(i)
+            # 按当前桶的顺序重排列表
+            nums = [j for i in bucket_list for j in i]
         return nums
 
 
 instance = Solution()
-bubble = instance.bubbleSort([1, 5, 2, 63])
-quick = instance.quickSort([1, 65, 2, 29, 3, 54, 7])
+res = instance.radixSort([100, 3, 2, 1])
+print(res)
