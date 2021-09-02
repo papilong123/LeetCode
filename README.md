@@ -1,25 +1,39 @@
 
 ### 滑动窗口
-- [$3_无重复字符的最长子串](/python/sliding_window/$3_LengthOfLongestSubstring.py)
-- [$30_串联所有单词的子串](/python/sliding_window/$30_SubstringWithConcatenationOfAllWords.py)
-- [$76_最小覆盖子串](/python/sliding_window/$76_MinimumWindowSubstring.py)
-- [$159_至多包含两个不同字符的最长子串](/python/sliding_window/$159_LongestSubstringwithAtMostTwoDistinctCharacters.py)
-- [$187_重复的DNA序列](/python/sliding_window/$187_RepeatedDNASequences.py)(更适合使用hashmap)
-- [$209_长度最小的子数组](/python/sliding_window/$209_MinimumSizeSubarraySum.py)
-- [$219_存在重复元素II](/python/sliding_window/$219_ContainsDuplicateII.py)(窗口长度固定)
-- [$220_存在重复元素III](/python/sliding_window/$220_ContainsDuplicateIII.py)
+- [$3_无重复字符的最长子串](python/sliding_window/$3_LengthOfLongestSubstring.py)
+- [$30_串联所有单词的子串](python/sliding_window/$30_SubstringWithConcatenationOfAllWords.py)
+- [$76_最小覆盖子串](python/sliding_window/$76_MinimumWindowSubstring.py)
+- [$159_至多包含两个不同字符的最长子串](python/sliding_window/$159_LongestSubstringwithAtMostTwoDistinctCharacters.py)
+- [$187_重复的DNA序列](python/sliding_window/$187_RepeatedDNASequences.py)(更适合使用hashmap)
+- [$209_长度最小的子数组](python/sliding_window/$209_MinimumSizeSubarraySum.py)
+- [$219_存在重复元素II](python/sliding_window/$219_ContainsDuplicateII.py)(窗口长度固定)
+- [$220_存在重复元素III](python/sliding_window/$220_ContainsDuplicateIII.py)
 
 ### 单调栈
 
-- [$20_有效的括号](/java/src/main/java/cn/leetcode/stack/$20_ValidParentheses.java)
+- [$20_有效的括号](java/src/main/java/cn/leetcode/stack/parentheses/$20_ValidParentheses.java)
 
 ### 动态规划
+
+- [$1964_找出到每个位置为止最长的有效障碍赛跑路线](python/dp/$1964_FindTheLongestValidObstacleCourseAtEachPosition.py)
+- [$1977_划分数字的方案数](python/dp/$1977_NumberOfWaysToSeparateNumbers.py)
+- [$1987_不同的好子序列数目](python/dp/$1987_NumberOfUniqueGoodSubsequences.py)
 
 ### dfs
 
 ### 二分查找
 
-#### 输入输出
+### 回溯
+
+- [$1723_完成所有工作的最短时间](python/backtrack/$1723_FindMinimumTimeToFinishAllJobs.py)
+
+#### 分治
+
+- [$1982_从子集的和还原数组](python/divide_and_conquer/$1982_FindArrayGivenSubsetSums.py)
+
+### 并查集
+
+- [$1970_你能穿过矩阵的最后一天](python/union_find/$1970_LastDayWhereYouCanStillCross.py)(还可以用二分+bfs解)
 
 ##### java
 

@@ -4,8 +4,7 @@ from typing import List
 
 class Solution:
     def longestObstacleCourseAtEachPosition(self, obstacles: List[int]) -> List[int]:
-        d = list()
-        ans = list()
+        d, ans = [], []
         for ob in obstacles:
             # 这里需要改成 >=
             if not d or ob >= d[-1]:
@@ -20,3 +19,7 @@ class Solution:
                 d[loc] = ob
 
         return ans
+
+
+instance = Solution().longestObstacleCourseAtEachPosition([1, 2, 3, 2])
+print(len(instance))

@@ -1,7 +1,7 @@
 from collections import deque
 from typing import List
 
-from union_find.template import UnionFind
+from union_find.UnionFind import UnionFind
 
 
 # 方法一：二分查找 + 广度优先搜索
@@ -41,33 +41,38 @@ def latestDayToCross(row: int, col: int, cells: List[List[int]]) -> int:
 
 
 # 方法二：时光倒流 + 并查集
-def latestDayToCrossUnionFind(row: int, col: int, cells: List[List[int]]) -> int:
-    # 编号为 n 的节点是超级节点 s
-    # 编号为 n+1 的节点是超级节点 t
-    n = row * col
-    uf = UnionFind(n + 2)
-
-    valid = [[0] * col for _ in range(row)]
-    ans = 0
-    for i in range(n - 1, -1, -1):
-        x, y = cells[i][0] - 1, cells[i][1] - 1
-        valid[x][y] = 1
-        # 并查集是一维的，(x, y) 坐标是二维的，需要进行转换
-        idx = x * col + y
-        if x - 1 >= 0 and valid[x - 1][y]:
-            uf.unite(idx, idx - col)
-        if x + 1 < row and valid[x + 1][y]:
-            uf.unite(idx, idx + col)
-        if y - 1 >= 0 and valid[x][y - 1]:
-            uf.unite(idx, idx - 1)
-        if y + 1 < col and valid[x][y + 1]:
-            uf.unite(idx, idx + 1)
-        if x == 0:
-            uf.unite(idx, n)
-        if x == row - 1:
-            uf.unite(idx, n + 1)
-        if uf.connected(n, n + 1):
-            ans = i
-            break
-
-    return ans
+class Solution:
+    def latestDayToCross(self, row: int, col: int, cells: List[List[int]]) -> int:
+        # 编号为 n 的节点是超级节点 s
+        # 编号为 n+1 的节点是超级节点 t
+        n = row * col
+        # 相邻的陆地
+        nb = [(-1, 0, -col), (1, 0, col), (0, -1, -1), (0, 1, 1)]
+        uf = UnionFind(n + 2)
+        # 陆地标记为1水域为0
+        L = [[0] * col for _ in range(row)]
+        ans = 0
+        # 时光倒流，合并陆地，直到s与t连通
+        for i in range(n - 1, -1, -1):
+            x, y = cells[i][0] - 1, cells[i][1] - 1
+            L[x][y] = 1
+            # 并查集是一维的，(x, y) 坐标是二维的，需要进行转换
+            idx = x * col + y
+            # 合并相邻陆地
+            for a, b, e in nb:
+                c, d = x + a, y + b
+                # 边界检测
+                if 0 <= c < row and 0 <= d < col:
+                    if L[c][d]:
+                        idn = idx + e
+                        uf.unite(idx, idn)
+            # 合并s节点（第一行）
+            if x == 0:
+                uf.unite(idx, n)
+            # 合并t节点（最后一行）
+            if x == row - 1:
+                uf.unite(idx, n + 1)
+            if uf.connected(n, n + 1):
+                ans = i
+                break
+        return ans
