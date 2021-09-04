@@ -1,4 +1,3 @@
-
 ### 滑动窗口
 - [$3_无重复字符的最长子串](python/sliding_window/$3_LengthOfLongestSubstring.py)
 - [$30_串联所有单词的子串](python/sliding_window/$30_SubstringWithConcatenationOfAllWords.py)
@@ -8,10 +7,6 @@
 - [$209_长度最小的子数组](python/sliding_window/$209_MinimumSizeSubarraySum.py)
 - [$219_存在重复元素II](python/sliding_window/$219_ContainsDuplicateII.py)(窗口长度固定)
 - [$220_存在重复元素III](python/sliding_window/$220_ContainsDuplicateIII.py)
-
-### 单调栈
-
-- [$20_有效的括号](java/src/main/java/cn/leetcode/stack/parentheses/$20_ValidParentheses.java)
 
 ### 动态规划
 
@@ -34,6 +29,32 @@
 ### 并查集
 
 - [$1970_你能穿过矩阵的最后一天](python/union_find/$1970_LastDayWhereYouCanStillCross.py)(还可以用二分+bfs解)
+
+### 单调栈
+
+#### 入门
+
+- [$42_接雨水](python/monotone_stack/$42_TrappingRainWater.py)(单减栈)***
+- [$84_柱状图中最大的矩形](python/monotone_stack/$84_LargestRectangleInHistogram.py)(单增栈，最后栈内有未处理完的数据，加哨兵或者再出栈一遍)***
+- [$85_最大矩形](python/monotone_stack/$85_MaximalRectangle.py)(套用84，对每一行看成直方图)
+- [$456_132模式](python/monotone_stack/$456_132Pattern.py)(单减栈，倒序入栈，最小值哨兵，每次出栈记录最大值，只要当前元素小于最大值，就判定为True)***
+- [$496_下一个更大元素I](python/monotone_stack/$496_NextGreaterElement.py)(单减栈，出栈时用字典记录栈顶元素与比起大的元素的一一对应关系)
+- [$503_下一个更大元素II](python/monotone_stack/$496_NextGreaterElementII.py)(套用496，遍历2*n-1个数，遍历时对下标模n)
+- [$739_每日温度](python/monotone_stack/$739_DailyTemperatures.py)(简单，出栈时用字典记录下标差值)
+
+##### 去除元素
+
+- [$316_去除重复字母](python/monotone_stack/$316_RemoveDuplicateLetters.py)(忽略已经在栈内的元素，比栈顶元素小并且i后面还有剩余的栈顶元素)
+- [$321_拼接最大数](python/monotone_stack/$321_CreateMaximumNumber.py)(套用402，分治法分别从两个数组中取i个和k-i个，拼接在一起)
+- [$402_移掉K位数字](python/monotone_stack/$402_RemoveKDigits.py)(最多出栈K次)
+
+#### 进阶
+
+- [~~$581_最短无序连续子数组~~](python/monotone_stack/$581_ShortestUnsortedContinuousSubarray.py)(不用看了，不需要用单调栈解)
+- [~~$654_最大二叉树~~](python/monotone_stack/$654_MaximumBinaryTree.py)(不用看了，不需要用单调栈解)
+- [$901_股票价格跨度](python/monotone_stack/$901_OnlineStockSpan.py)(单减栈，最前面添加一个最大值的哨兵，记录每次出完栈的栈顶元素与当前元素的下标差)
+- [$1944_队列中可以看到的人数](python/monotone_stack/$1944_NumberOfVisiblePeopleInAQueue.py)(记录出栈后的索引差，栈弹出完后要注意是否是空栈)
+- [~~$1081_不同字符的最小子序列~~](python/monotone_stack/$1081_SmallestSubsequenceOfDistinctCharacters.py)(和316一样)
 
 ##### java
 

@@ -2,6 +2,7 @@ package cn.leetcode.sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * 十大排序算法
@@ -106,6 +107,7 @@ public class $912_SortAnArray {
         int[] right = Arrays.copyOfRange(array, mid, array.length);
         return merge(mergeSort(left), mergeSort(right));
     }
+
     /**
      * 归并排序——将两段排序好的数组结合成一个排序数组
      *
@@ -113,7 +115,7 @@ public class $912_SortAnArray {
      * @param right
      * @return 数组 排序后的数组
      */
-    public static int[] merge(int[] left, int[] right) {
+    private static int[] merge(int[] left, int[] right) {
         int[] result = new int[left.length + right.length];
         for (int index = 0, i = 0, j = 0; index < result.length; index++) {
             if (i >= left.length)
@@ -130,47 +132,50 @@ public class $912_SortAnArray {
 
     /**
      * 快速排序方法
+     *
      * @param array 数组
-     * @param start
-     * @param end
-     * @return
+     * @param left  左边界
+     * @param right 右边界
      */
-    public static int[] quickSort(int[] array, int start, int end) {
-        if (array.length < 1 || start < 0 || end >= array.length || start > end) return null;
-        int smallIndex = partition(array, start, end);
-        if (smallIndex > start)
-            quickSort(array, start, smallIndex - 1);
-        if (smallIndex < end)
-            quickSort(array, smallIndex + 1, end);
-        return array;
+    public static void quickSort(int[] array, int left, int right) {
+        if (left < right) {
+            int mid = partition(array, left, right);
+            quickSort(array, left, mid - 1);
+            quickSort(array, mid + 1, right);
+        }
     }
+
     /**
      * 快速排序算法——partition
-     * @param array 数组
-     * @param start
-     * @param end
-     * @return
+     *
+     * @param arr   数组
+     * @param left  左边界
+     * @param right 右边界
+     * @return 返回值
      */
-    public static int partition(int[] array, int start, int end) {
-        int pivot = (int) (start + Math.random() * (end - start + 1));
-        int smallIndex = start - 1;
-        swap(array, pivot, end);
-        for (int i = start; i <= end; i++)
-            if (array[i] <= array[end]) {
-                smallIndex++;
-                if (i > smallIndex)
-                    swap(array, i, smallIndex);
-            }
-        return smallIndex;
+    private static int partition(int[] arr, int left, int right) {
+        // 随机化处理
+        int i = left + new Random().nextInt(right - left + 1);
+        swap(arr, left, i);
+        
+        int key = left;
+        while (left < right) {
+            while (left < right && arr[key] <= arr[right]) right--;
+            while (left < right && arr[key] >= arr[left]) left--;
+            swap(arr, left, right);
+        }
+        swap(arr, left, key);
+        return left;
     }
 
     /**
      * 交换数组内两个元素
+     *
      * @param array 数组
-     * @param i
-     * @param j
+     * @param i     左下标
+     * @param j     右下标
      */
-    public static void swap(int[] array, int i, int j) {
+    private static void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -197,24 +202,26 @@ public class $912_SortAnArray {
         }
         return array;
     }
+
     /**
      * 建立最大堆
      *
      * @param array 数组
      */
-    public static void buildMaxHeap(int[] array) {
+    private static void buildMaxHeap(int[] array) {
         //从最后一个非叶子节点开始向上构造最大堆
-        for (int i = (len/2 - 1); i >= 0; i--) { //感谢 @让我发会呆 网友的提醒，此处应该为 i = (len/2 - 1)
+        for (int i = (len / 2 - 1); i >= 0; i--) { //感谢 @让我发会呆 网友的提醒，此处应该为 i = (len/2 - 1)
             adjustHeap(array, i);
         }
     }
+
     /**
      * 调整使之成为最大堆
      *
      * @param array 数组
-     * @param i
+     * @param i     调整索引
      */
-    public static void adjustHeap(int[] array, int i) {
+    private static void adjustHeap(int[] array, int i) {
         int maxIndex = i;
         //如果有左子树，且左子树大于父节点，则将最大指针指向左子树
         if (i * 2 < len && array[i * 2] > array[maxIndex])

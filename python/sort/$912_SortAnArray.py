@@ -86,11 +86,10 @@ class Solution(object):
             return left
 
         def quicksort(arr, left, right):  # 递归调用
-            if left >= right:
-                return
-            mid = partition(arr, left, right)
-            quicksort(arr, left, mid - 1)
-            quicksort(arr, mid + 1, right)
+            if left < right:
+                mid = partition(arr, left, right)
+                quicksort(arr, left, mid - 1)
+                quicksort(arr, mid + 1, right)
 
         # 主函数
         n = len(nums)
@@ -237,5 +236,5 @@ class Solution(object):
 
 
 instance = Solution()
-res = instance.radixSort([100, 3, 2, 1])
+res = instance.quickSort([6, 9, 5, 1])
 print(res)
