@@ -1,7 +1,4 @@
-import math
-
-
-class Solution(object):
+class Sort(object):
     # 冒泡排序
     def bubbleSort(self, nums):
         n = len(nums)
@@ -235,6 +232,6 @@ class Solution(object):
         return nums
 
 
-instance = Solution()
+instance = Sort()
 res = instance.quickSort([6, 9, 5, 1])
 print(res)

@@ -111,8 +111,8 @@ public class $912_SortAnArray {
     /**
      * 归并排序——将两段排序好的数组结合成一个排序数组
      *
-     * @param left
-     * @param right
+     * @param left  左边界
+     * @param right 右边界
      * @return 数组 排序后的数组
      */
     private static int[] merge(int[] left, int[] right) {
@@ -157,7 +157,7 @@ public class $912_SortAnArray {
         // 随机化处理
         int i = left + new Random().nextInt(right - left + 1);
         swap(arr, left, i);
-        
+
         int key = left;
         while (left < right) {
             while (left < right && arr[key] <= arr[right]) right--;

@@ -13,5 +13,9 @@ class Solution:
             A = np.mod(np.dot(A, A), mod)
             n >>= 1
         x = np.array([0, 1])
-        y = np.mod(np.dot(x, B), mod)
+        y = np.mod(np.dot(B, x), mod)
         return int(y[0])
+
+
+res = Solution().fib(7)
+print(res)

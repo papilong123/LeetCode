@@ -1,6 +1,6 @@
 package cn.leetcode.dp.matrixquickpow;
 
-public class template {
+public class QuickPow {
 
     public int test(int n) {
         int[][] q = {{1, 1}, {1, 0}};
