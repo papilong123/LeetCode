@@ -220,15 +220,23 @@ class Sort(object):
 
     # 基数排序
     def radixSort(self, nums, radix=10):
-        n = len(str(max(nums)))  # 记录最大值的位数
-        for k in range(n):  # n轮排序
-            # 每一轮生成10个列表
-            bucket_list = [[] for i in range(10)]  # 因为每一位数字都是0~9，故建立10个桶
+        n = len(nums)
+        if n < 2:
+            return 0
+
+        placement = 1
+        max_digit = max(nums)
+        while placement <= max_digit:
+            buckets = [[] for _ in range(radix)]
             for i in nums:
-                # 按第k位放入到桶中
-                bucket_list[i // (10 ** k) % 10].append(i)
-            # 按当前桶的顺序重排列表
-            nums = [j for i in bucket_list for j in i]
+                tmp = int((i / placement) % radix)
+                buckets[tmp].append(i)
+            a = 0
+            for b in range(radix):
+                for i in buckets[b]:
+                    nums[a] = i
+                    a += 1
+            placement *= radix
         return nums
 
 
