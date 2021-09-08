@@ -1,5 +1,7 @@
 from typing import List
 
+from union_find.UnionFind import UnionFind
+
 
 class Solution:
     # 并查集+分解质因数
@@ -21,28 +23,3 @@ class Solution:
                 return False
         return True
 
-
-class UnionFind:
-    def __init__(self, x) -> None:
-        self.uf = [-1] * x
-
-    def find(self, x):
-        r = x
-        while self.uf[x] >= 0:
-            x = self.uf[x]
-
-        while r != x:
-            self.uf[r], r = x, self.uf[r]
-        return x
-
-    def union(self, x, y):
-        ux, uy = self.find(x), self.find(y)
-        if ux == uy:
-            return
-        if self.uf[ux] >= self.uf[uy]:
-            self.uf[uy] += self.uf[ux]
-            self.uf[ux] = uy
-        else:
-            self.uf[ux] += self.uf[uy]
-            self.uf[uy] = ux
-        return
