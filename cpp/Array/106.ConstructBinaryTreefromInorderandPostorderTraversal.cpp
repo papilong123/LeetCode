@@ -2,15 +2,14 @@
 #include <unordered_map>
 using namespace std;
 
-/**
- * Definition for a binary cn.example.tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
 class Solution {
     unordered_map<int,int> m;
     vector<int> p;

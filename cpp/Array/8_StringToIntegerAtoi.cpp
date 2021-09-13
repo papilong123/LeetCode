@@ -1,4 +1,7 @@
 #include <string>
+#include <climits>
+#include <iostream>
+
 using namespace std;
 
 class Solution {
@@ -26,3 +29,9 @@ public:
         return flag > 0 ? res : -res;
     }
 };
+
+
+int myAtoi(){
+    int res = Solution().myAtoi("123");
+    cout << res;
+}

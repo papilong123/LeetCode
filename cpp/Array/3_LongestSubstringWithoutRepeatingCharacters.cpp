@@ -1,5 +1,6 @@
 #include <string>
 #include <set>
+#include <iostream>
 
 using namespace std;
 
@@ -24,5 +25,10 @@ public:
     }
 
 };
-Solution ins = Solution();
-int res = ins.lengthOfLongestSubstring("ads");
+
+int main(){
+   Solution ins = Solution();
+   int res = ins.lengthOfLongestSubstring("ads");
+   cout << res;
+}
+

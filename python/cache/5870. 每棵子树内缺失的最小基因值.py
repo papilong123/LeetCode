@@ -62,7 +62,38 @@ class Solution:
         return ans
 
 
-parents = [-1, 0, 1, 0, 3, 3]  # 前序遍历的父列表
-nums = [12, 6, 8, 10, 3, 1, 5]  # 前序遍历的基因列表
-res = Solution().smallestMissingValueSubtree(parents, nums)
-print(res)
+class Solution2:
+    def smallestMissingValueSubtree(self, parents: List[int], nums: List[int]) -> List[int]:
+        n = len(parents)
+        res = [1] * n  # 只有值1的祖先和它本身有缺失值>1。那就是从根0到节点值为1的路径，所以我们要处理这条路径上的节点
+        seen = [0] * 100010
+        if 1 not in nums:  # 没有1的基因值，返回全1
+            return res
+
+        # 前序遍历建图
+        children = defaultdict(list)
+        for i in range(1, n):
+            children[parents[i]].append(i)
+
+        def dfs(i):
+            if seen[nums[i]] == 0:  # 基因值没搜过
+                for j in children[i]:
+                    dfs(j)
+                seen[nums[i]] = 1
+
+        i = nums.index(1)  # 父节点的位置
+        miss = 1
+        while i >= 0:  # 从下向上，一直到树根
+            dfs(i)
+            while seen[miss]:
+                miss += 1
+
+            res[i] = miss
+            i = parents[i]
+        return res
+
+
+out_parents = [-1, 0, 1, 0, 3, 3]  # 前序遍历的父列表
+out_nums = [5, 4, 6, 2, 1, 3]  # 前序遍历的基因列表
+r = Solution2().smallestMissingValueSubtree(out_parents, out_nums)
+print(r)
