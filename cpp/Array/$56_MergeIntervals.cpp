@@ -1,9 +1,14 @@
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         vector<vector<int>> res;
         if(intervals.empty()) return res;
-        cn.example.sort(intervals.begin(),intervals.end());
+        sort(intervals.begin(),intervals.end());
         int index=0;
         res.push_back(intervals[0]);
 

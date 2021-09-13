@@ -1,6 +1,9 @@
+#include <string>
+using namespace std;
+
 class Solution {
 public:
-    int myAtoi(cn.example.string str) {
+    int myAtoi(string str) {
         int res = 0;
         int i = 0;
         int flag = 1;

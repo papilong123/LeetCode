@@ -1,8 +1,14 @@
+#include <vector>
+#include <algorithm>
+#include <climits>
+
+using namespace std;
+
 class Solution {
 public:
     int maximumProduct(vector<int>& nums) {
         int n=nums.size();
-        cn.example.sort(nums.begin(),nums.end());
+        sort(nums.begin(),nums.end());
         int a=INT_MIN,b=INT_MIN;
         if(nums[0]<0&&nums[1]<0){
             a=nums[0]*nums[1]*nums[n-1];

@@ -2,7 +2,7 @@ import heapq
 from typing import List
 
 
-# 贪心算法，银行家算法
+# 排序+堆+贪心，银行家算法
 class Solution:
     def findMaximizedCapital(self, k: int, w: int, profits: List[int], capital: List[int]) -> int:
         if w >= max(capital):  # 如果当前拥有资金大于等于capital里最大的启动资金，则返回最大k个启动资金的和

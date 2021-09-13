@@ -1,4 +1,8 @@
-二分搜索，先找到和 x 最接近的两个数，再向两边扩展。不过这个方法在 k 值较大的时候会退化，因此比较傻。
+#include <vector>
+#include <queue>
+using namespace std;
+
+// 二分搜索，先找到和 x 最接近的两个数，再向两边扩展。不过这个方法在 k 值较大的时候会退化，因此比较傻。
 vector<int> findClosestElements(vector<int>& arr, int k, int x) {
     if (arr.size() == 1) return arr; 
     // 双候选

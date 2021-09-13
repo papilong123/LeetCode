@@ -1,8 +1,12 @@
+#include <vector>
+#include <stack>
+using namespace std;
+
 class Solution {
 public:
     int maxWidthRamp(vector<int>& A) {
         int res=0;
-        cn.example.stack<int> s;
+        stack<int> s;
         int n=A.size();
         s.push(0);
         for(int i=1;i<n;i++){

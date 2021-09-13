@@ -1,5 +1,5 @@
 #include<vector>
-#include<iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -30,7 +30,7 @@ public:
     }
 
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        cn.example.sort(candidates.begin(),candidates.end());
+        sort(candidates.begin(),candidates.end());
         this->candidates=candidates;
         dfs(0,target);
         return res;

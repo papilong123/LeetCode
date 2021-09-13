@@ -1,3 +1,10 @@
+#include <vector>
+#include <algorithm>
+#include <numeric>
+
+using namespace std;
+
+
 class Solution {
 public:
     vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
@@ -7,7 +14,7 @@ public:
             int sum=accumulate(mat[i].begin(),mat[i].end(),0);
             arr.emplace_back(sum,i);
         }
-        cn.example.sort(arr.begin(),arr.end());
+        sort(arr.begin(),arr.end());
         for(int i=0;i<k;i++){
             res.emplace_back(arr[i].second);
         }

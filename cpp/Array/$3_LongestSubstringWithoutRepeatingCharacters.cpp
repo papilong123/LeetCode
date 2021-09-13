@@ -1,7 +1,12 @@
+#include <string>
+#include <set>
+
+using namespace std;
+
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        int n=s.size();
+        int n = s.size();
         if(n==0) return 0;
 
         int ans=0;
@@ -19,6 +24,5 @@ public:
     }
 
 };
-int main(){
-    lengthOfLongestSubstring("ads");
-}
+Solution ins = Solution();
+int res = ins.lengthOfLongestSubstring("ads");

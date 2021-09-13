@@ -1,8 +1,14 @@
+
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
 class Solution {
 public:
     vector<int> advantageCount(vector<int>& A, vector<int>& B) {
         vector<int> res,flag(A.size(),0);
-        cn.example.sort(A.begin(),A.end());
+        sort(A.begin(),A.end());
 
         for(int i=0;i<B.size();i++){
             int j;

@@ -1,3 +1,7 @@
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
 /**
  * Definition for a binary cn.example.tree node.
  * struct TreeNode {

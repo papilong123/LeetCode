@@ -1,7 +1,13 @@
+#include <vector>
+#include <string>
+#include <climits>
+
+using namespace std;
+
 class Solution {
 public:
-    vector<cn.example.string> commonChars(vector<cn.example.string>& A) {
-        vector<cn.example.string> res;
+    vector<string> commonChars(vector<string>& A) {
+        vector<string> res;
 
         vector<int> vals(26,INT_MAX);
 
@@ -16,7 +22,7 @@ public:
         }
         for(int i=0;i<26;i++){
             for(int j=0;j<vals[i];j++){
-                res.push_back(cn.example.string(1,i+'a'));
+                res.push_back(string(1,i+'a'));
             }
         }
         return res;

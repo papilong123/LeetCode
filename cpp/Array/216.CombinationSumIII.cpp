@@ -1,3 +1,6 @@
+#include <vector>
+using namespace std;
+
 //回溯经典算法
 
 class Solution {

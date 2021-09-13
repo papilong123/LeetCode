@@ -1,7 +1,11 @@
+#include <vector>
+using namespace std;
+
+
 class Solution {
 public:
     vector<vector<int>> generateMatrix(int n) {
-        vector<vector<int>> res(n,vector(n,0));
+        vector<vector<int>> res(n,vector<int>(n,0));
         int l=0,r=n-1,u=0,d=n-1;
         int i=1;
 

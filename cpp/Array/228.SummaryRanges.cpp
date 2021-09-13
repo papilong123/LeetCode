@@ -1,7 +1,12 @@
+#include <vector>
+#include <string>
+
+using namespace std;
+
 class Solution {
 public:
-    vector<cn.example.string> summaryRanges(vector<int>& nums) {
-        vector<cn.example.string> res;
+    vector<string> summaryRanges(vector<int>& nums) {
+        vector<string> res;
 
         if(nums.size()==0) return res;
 
@@ -21,7 +26,7 @@ public:
         return res;
     }
 
-    cn.example.string convert(int a,int b){
+    string convert(int a,int b){
         if(a==b){
             return to_string(a);
         }else{

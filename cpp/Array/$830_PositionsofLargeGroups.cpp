@@ -1,6 +1,11 @@
+#include <vector>
+#include <string>
+
+using namespace std;
+
 class Solution {
 public:
-    vector<vector<int>> largeGroupPositions(cn.example.string S) {
+    vector<vector<int>> largeGroupPositions(string S) {
         vector<vector<int>> res;
         for(int i=0,j=0;i<S.size();i=j){
             while(S[i]==S[j]) j++;

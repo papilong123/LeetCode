@@ -1,9 +1,13 @@
+#include <vector>
+#include <algorithm>
+using namespace std;
+
 class Solution {
     vector<vector<int>> res;
     vector<int> path;
 public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        cn.example.sort(nums.begin(),nums.end());
+        sort(nums.begin(),nums.end());
         helper(0,nums);
         return res;
     }

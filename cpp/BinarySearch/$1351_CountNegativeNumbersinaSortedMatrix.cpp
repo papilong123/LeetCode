@@ -1,3 +1,7 @@
+#include <vector>
+using namespace std;
+
+
 //二分查找
 class Solution {
 public:
@@ -23,7 +27,7 @@ public:
 };
 
 //暴力
-class Solution {
+class Solution1 {
 public:
     int countNegatives(vector<vector<int>>& grid) {
         int m=grid.size(),n=grid[0].size();
