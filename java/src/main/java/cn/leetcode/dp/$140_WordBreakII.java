@@ -4,10 +4,10 @@ import java.util.*;
 
 public class $140_WordBreakII {
 
-    // 解法一，官方解法，记忆化、回溯
+    // 解法一、记忆化搜索 + 剪枝（官方解法）
     public List<String> wordBreak(String s, List<String> wordDict) {
         Map<Integer, List<List<String>>> map = new HashMap<>();
-        List<List<String>> wordBreaks = backtrack(s, s.length(), new HashSet<>(wordDict), 0, map);
+        List<List<String>> wordBreaks = dfs(s, s.length(), new HashSet<>(wordDict), 0, map);
         List<String> breakList = new ArrayList<>();
         for (List<String> wordBreak : wordBreaks) {
             breakList.add(String.join(" ", wordBreak));
@@ -15,29 +15,33 @@ public class $140_WordBreakII {
         return breakList;
     }
 
-    public List<List<String>> backtrack(String s, int length, Set<String> wordSet, int index, Map<Integer, List<List<String>>> map) {
-        if (!map.containsKey(index)) {
-            List<List<String>> wordBreaks = new ArrayList<>();
-            if (index == length) {
-                wordBreaks.add(new ArrayList<>());
-            }
-            for (int i = index + 1; i <= length; i++) {
-                String word = s.substring(index, i);
-                if (wordSet.contains(word)) {
-                    List<List<String>> nextWordBreaks = backtrack(s, length, wordSet, i, map);
-                    for (List<String> nextWordBreak : nextWordBreaks) {
-                        LinkedList<String> wordBreak = new LinkedList<>(nextWordBreak);
-                        wordBreak.offerFirst(word);
-                        wordBreaks.add(wordBreak);
-                    }
+    public List<List<String>> dfs(String s, int length, Set<String> wordSet, int index, Map<Integer, List<List<String>>> map) {
+        if (map.containsKey(index)) {  // 记忆化
+            return map.get(index);
+        }
+
+        List<List<String>> wordBreaks = new ArrayList<>();
+        if (index == length) {  // 特殊情况，最后返回一个带有一个list的res
+            wordBreaks.add(new ArrayList<>());
+        }
+
+        for (int i = index + 1; i <= length; i++) {
+            String word = s.substring(index, i);
+            if (wordSet.contains(word)) {  // 剪枝
+                List<List<String>> nextWordBreaks = dfs(s, length, wordSet, i, map);
+                for (List<String> nextWordBreak : nextWordBreaks) {  // 取出所有的数组，在每一个数组前加上当前单词
+                    LinkedList<String> wordBreak = new LinkedList<>(nextWordBreak);
+                    wordBreak.offerFirst(word);
+                    wordBreaks.add(wordBreak);
                 }
             }
-            map.put(index, wordBreaks);
         }
+
+        map.put(index, wordBreaks);
         return map.get(index);
     }
 
-    // 解法二、liweiwei1419, 回溯
+    // 解法二、dp预处理+回溯（liweiwei1419）
     public List<String> wordBreakBacktrack(String s, List<String> wordDict) {
         // 为了快速判断一个单词是否在单词集合中，需要将它们加入哈希表
         Set<String> wordSet = new HashSet<>(wordDict);
@@ -107,7 +111,7 @@ public class $140_WordBreakII {
             add("sand");
             add("dog");
         }};
-        List<String> res = new $140_WordBreakII().wordBreakBacktrack("catsanddog", str);
+        List<String> res = new $140_WordBreakII().wordBreak("catsanddog", str);
         System.out.println(res);
     }
 

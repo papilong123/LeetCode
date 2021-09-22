@@ -1,4 +1,5 @@
 ### 滑动窗口
+
 - [$3_无重复字符的最长子串](python/sliding_window/$3_LengthOfLongestSubstring.py)
 - [$30_串联所有单词的子串](python/sliding_window/$30_SubstringWithConcatenationOfAllWords.py)
 - [$76_最小覆盖子串](python/sliding_window/$76_MinimumWindowSubstring.py)
@@ -20,11 +21,42 @@
 
 ### 回溯
 
+#### 排列、组合、子集相关问题(0到100题)
+
+- [$39_组合总和](java/src/main/java/cn/leetcode/backtrack/basic/$39_CombinationSum.java)(无重复元素数组的和等于target的组合，回溯 +
+  剪枝target < 0)
+- [$40_组合总和II](java/src/main/java/cn/leetcode/backtrack/basic/$40_CombinationSum2.java)(
+  有重复元素数组的和等于target的组合集合，注意结果去重，排序+剪枝重复相邻元素)
+- [$77_组合](java/src/main/java/cn/leetcode/backtrack/basic/$77_Combinations.java)(n个元素的k组合,dfs函数中元素不能重复所以有i+1)
+- [$46_全排列](java/src/main/java/cn/leetcode/backtrack/basic/$46_Permutations.java)(无重复元素，bool数组表示用过的数字)
+- [$47_全排列II](java/src/main/java/cn/leetcode/backtrack/basic/$47_PermutationsII.java)(有重复元素,先排序+剪枝重复相邻元素，bool数组表示用过的数字)
+- [$60_排列序列（困难）](java/src/main/java/cn/leetcode/backtrack/basic/$60_PermutationSequence.java)(
+  好题，计算还未确定的数字的全排列的个数，第1次进入的时候是n-1)***
+- [$78_子集](java/src/main/java/cn/leetcode/backtrack/basic/$78_Subsets.java)(两条路，选或不选)
+- [$90_子集II](java/src/main/java/cn/leetcode/backtrack/basic/$90_SubsetsII.java)(有重复元素，结果不能有重复元素)
+- [$89_格雷编码](java/src/main/java/cn/leetcode/backtrack/basic/$89_GrayCode.java)(镜像二叉树,左右子树递归时传入[0, 1]的不同的遍历顺序)
+
+#### 基础
+
+- [$17_电话号码的字母组合](java/src/main/java/cn/leetcode/backtrack/basic/$17_LetterCombinationsOfAPhoneNumber.java)(
+  字符和字符串hashmap)
+- [$22_括号生成](java/src/main/java/cn/leetcode/backtrack/basic/$22_GenerateParentheses.java)(
+  二叉树左右括号同时计数，右括号不大于左括号，都等于n时加入结果集)
+- [$37_解数独](java/src/main/java/cn/leetcode/backtrack/basic/$37_SudokuSolver.java)(
+  每个空白位置用符合条件的1到9逐个尝试，返回后面递归返回的结果，9个都不行返回false，遍历完没有返回false，说明找到了合适棋盘位置了)
+- [$51_N皇后](java/src/main/java/cn/leetcode/backtrack/basic/$51_NQueens.java)(三个集合,回溯前在集合中剪枝，)
+- [$79_单词搜索](java/src/main/java/cn/leetcode/backtrack/basic/$79_WordSearch.java)(字符串的下一个和当前元素的邻居不相等则剪枝)
+- [$93_复原IP地址](java/src/main/java/cn/leetcode/backtrack/basic/$93_RestoreIPAddresses.java)(先判断截取的 ip 段是否合法，然后用截取函数截取字符串)
+
+#### 进阶
+
 - [$1723_完成所有工作的最短时间](python/backtrack/$1723_FindMinimumTimeToFinishAllJobs.py)
 
-#### 分治
+### 分治
 
 - [$1982_从子集的和还原数组](python/divide_and_conquer/$1982_FindArrayGivenSubsetSums.py)
+
+### 链表
 
 ### 并查集
 
@@ -62,7 +94,11 @@
 - [~~$1081_不同字符的最小子序列~~](python/stack/monotone_stack/$1081_SmallestSubsequenceOfDistinctCharacters.py)(和316一样)
 - [$907_子数组的最小值之和](python/stack/monotone_stack/$907_SumOfSubarrayMinimums.py)(钦定单调栈最难的一题)
 
-# 大杂烩
+### 快速幂
+
+- [$50_Pow(x, n)](java/src/main/java/cn/leetcode/math/$50_Powxn.java)()
+
+### 大杂烩
 
 - [$327_区间和的个数](java/src/main/java/cn/leetcode/binaryindexedtree/$327_CountOfRangeSum.java)(树状数组or归并排序or平衡树)
 

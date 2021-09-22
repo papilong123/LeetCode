@@ -1,4 +1,4 @@
-package cn.leetcode.backtrack;
+package cn.leetcode.backtrack.basic;
 
 import java.util.*;
 

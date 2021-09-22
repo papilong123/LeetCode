@@ -26,9 +26,9 @@ public:
 
 };
 
-int main(){
-   Solution ins = Solution();
-   int res = ins.lengthOfLongestSubstring("ads");
-   cout << res;
-}
+// int main(){
+//    Solution ins = Solution();
+//    int res = ins.lengthOfLongestSubstring("ads");
+//    cout << res;
+// }
 

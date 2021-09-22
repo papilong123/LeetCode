@@ -1,4 +1,4 @@
-package cn.leetcode.backtrack;
+package cn.leetcode.backtrack.basic;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,21 +24,20 @@ public class $17_LetterCombinationsOfAPhoneNumber {
         }};
         backtrack(combinations, phoneMap, digits, 0, new StringBuffer());
         return combinations;
-
     }
 
-    public void backtrack(List<String> combinations, Map<Character, String> phoneMap, String digits, int index, StringBuffer combination) {
+    public void backtrack(List<String> res, Map<Character, String> phoneMap, String digits, int index, StringBuffer path) {
         if (index == digits.length()) {
-            combinations.add(combination.toString());
-        } else {
-            char digit = digits.charAt(index);
-            String letters = phoneMap.get(digit);
-            int lettersCount = letters.length();
-            for (int i = 0; i < lettersCount; i++) {
-                combination.append(letters.charAt(i));
-                backtrack(combinations, phoneMap, digits, index + 1, combination);
-                combination.deleteCharAt(index);
-            }
+            res.add(path.toString());
+            return;
+        }
+        char digit = digits.charAt(index);
+        String letters = phoneMap.get(digit);
+        int lettersCount = letters.length();
+        for (int i = 0; i < lettersCount; i++) {  // 每个数字对应的所有字母
+            path.append(letters.charAt(i));
+            backtrack(res, phoneMap, digits, index + 1, path);
+            path.deleteCharAt(index);
         }
     }
 

@@ -19,7 +19,3 @@ class Solution:
                 d[loc] = ob
 
         return ans
-
-
-instance = Solution().longestObstacleCourseAtEachPosition([1, 2, 3, 2])
-print(len(instance))

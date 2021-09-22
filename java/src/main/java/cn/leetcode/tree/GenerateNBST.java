@@ -41,6 +41,7 @@ public class GenerateNBST {
     }
 
     // 96. 不同的二叉搜索树,求恰由 n 个节点组成且节点值从 1 到 n 互不相同的 二叉搜索树 有多少种？
+    // 方法一、dp（G[0]=G[1]=1）空节点或一个节点也是BST
     public int numTrees(int n) {
         int[] G = new int[n + 1];
         G[0] = 1;
@@ -52,5 +53,16 @@ public class GenerateNBST {
             }
         }
         return G[n];
+    }
+
+    // 96. 不同的二叉搜索树
+    // 方法二、卡特兰数公式
+    public int numTreesFormula(int n) {
+        // 提示：我们在这里需要用 long 类型防止计算过程中的溢出
+        long C = 1;
+        for (int i = 0; i < n; i++) {
+            C = C * 2 * (2 * i + 1) / (i + 2);
+        }
+        return (int) C;
     }
 }

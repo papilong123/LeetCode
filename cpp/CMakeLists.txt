@@ -255,4 +255,4 @@ add_executable(cpp
         Tree/814_BinaryTreePruning.cpp
         TwoPointers/1347_MinimumNumberofStepstoMakeTwoStringsAnagram.cpp
         TwoPointers/240_Searcha2DMatrixII.cpp
-        TwoPointers/977_SquaresofaSortedArray.cpp)
+        TwoPointers/977_SquaresofaSortedArray.cpp TwoPointers/524_LongestWordInDictionaryThroughDeleting.cpp BinarySearch/162FindPeakElement.cpp Trie/\$208_ImplementTriePrefixTree.cpp SlidingWindow/2009_MinimumNumberOfOperationsToMakeArrayContinuous.cpp)

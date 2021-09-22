@@ -1,4 +1,4 @@
-package cn.leetcode.backtrack;
+package cn.leetcode.backtrack.basic;
 
 public class $60_PermutationSequence {
     private boolean[] used;
